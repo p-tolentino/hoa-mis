@@ -1,6 +1,7 @@
 import { LoginButton } from "@/components/auth/login-button";
 import { Button } from "@/components/ui/button";
-import { RxAvatar as User, RxArrowRight as RightArrow } from "react-icons/rx";
+import { FaUserCheck as User } from "react-icons/fa";
+import { RxArrowRight as RightArrow } from "react-icons/rx";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         </h1>
         <p className="text-white text-lg">Only verified users may proceed</p>
         <div>
-          <LoginButton>
+          <LoginButton mode="modal" asChild>
             <Button variant="secondary" size="lg" className="gap-2">
               Sign In <RightArrow />
             </Button>
