@@ -1,4 +1,4 @@
-import { RxAvatar as User } from "react-icons/rx";
+import { FaUserCheck as User } from "react-icons/fa";
 
 interface HeaderProps {
   label: string;
