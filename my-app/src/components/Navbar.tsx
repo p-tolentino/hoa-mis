@@ -52,12 +52,9 @@ function Navbar() {
           padding="10px"
           px="20px"
           onClick={() => handleLinkClick("about us")}
-          style={{
-            color:
-              clickedLinkId === "about us"
-                ? colors.selected
-                : colors.unselected,
-          }}
+          color={
+            clickedLinkId === "about us" ? colors.selected : colors.unselected
+          }
         >
           About Us
         </Link>
@@ -66,12 +63,9 @@ function Navbar() {
           padding="10px"
           px="20px"
           onClick={() => handleLinkClick("facilities")}
-          style={{
-            color:
-              clickedLinkId === "facilities"
-                ? colors.selected
-                : colors.unselected,
-          }}
+          color={
+            clickedLinkId === "facilities" ? colors.selected : colors.unselected
+          }
         >
           Facilities
         </Link>
@@ -80,12 +74,9 @@ function Navbar() {
           padding="10px"
           px="20px"
           onClick={() => handleLinkClick("policies")}
-          style={{
-            color:
-              clickedLinkId === "policies"
-                ? colors.selected
-                : colors.unselected,
-          }}
+          color={
+            clickedLinkId === "policies" ? colors.selected : colors.unselected
+          }
         >
           Policies
         </Link>
@@ -94,12 +85,9 @@ function Navbar() {
           padding="10px"
           px="20px"
           onClick={() => handleLinkClick("contact us")}
-          style={{
-            color:
-              clickedLinkId === "contact us"
-                ? colors.selected
-                : colors.unselected,
-          }}
+          color={
+            clickedLinkId === "contact us" ? colors.selected : colors.unselected
+          }
         >
           Contact Us
         </Link>
