@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MdComputer as Logo } from "react-icons/md";
 import {
   Link,

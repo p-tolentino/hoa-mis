@@ -11,7 +11,6 @@ import {
 // import "@fontsource/cabin";
 import { Icon } from "@chakra-ui/react";
 import { ArrowForwardIcon, EmailIcon } from "@chakra-ui/icons";
-import { MdCall } from "react-icons/md";
 import { useState } from "react";
 
 function ContactUs() {

@@ -1,6 +1,5 @@
 import {
   Flex,
-  Box,
   Text,
   Heading,
   Stack,
@@ -8,9 +7,6 @@ import {
   CardBody,
   Image,
   Divider,
-  CardFooter,
-  ButtonGroup,
-  Button,
 } from "@chakra-ui/react";
 
 function Facilities() {

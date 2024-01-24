@@ -1,11 +1,17 @@
 import { Flex, Box, Text, Heading, Stack } from "@chakra-ui/react";
+import Image from "next/image";
 import landscape from "../images/landscape.jpg";
 
 function AboutUs() {
   return (
     <Flex w="100vw" h="100vh" justify="space-between">
       <Box w="50vw" h="100vh" left="0">
-        <img src={landscape} alt="Landscape" style={{ height: "100vh" }} />
+        <Image
+          className="landscape"
+          src={landscape}
+          alt="Landscape"
+          style={{ height: "100vh" }}
+        />
       </Box>
       <Box w="50vw" h="100vh" verticalAlign="right">
         <Flex h="100vh" justify="center" alignItems="center">
