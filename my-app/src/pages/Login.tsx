@@ -9,7 +9,7 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import Image from "next/image";
+// import Image from "next/image";
 import subdivision from "../images/subdivision.jpg";
 import GoogleIcon from "../images/google-icon.png";
 
@@ -39,7 +39,7 @@ function Login() {
               variant="outline"
               _hover={{ color: "#E9C850" }}
               leftIcon={
-                <Image
+                <img
                   src={GoogleIcon}
                   alt="Google Icon"
                   style={{ width: "30px" }}
@@ -68,7 +68,7 @@ function Login() {
         </Flex>
       </Box>
       <Box w="50vw" height="100vh" position="absolute" right="0">
-        <Image src={subdivision} alt="Subdivision" style={{ height: "100%" }} />
+        <img src={subdivision} alt="Subdivision" style={{ height: "100%" }} />
       </Box>
     </Flex>
   );

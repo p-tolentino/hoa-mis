@@ -1,12 +1,12 @@
 import { Flex, Box, Text, Heading, Stack } from "@chakra-ui/react";
-import Image from "next/image";
+// import Image from "next/image";
 import landscape from "../images/landscape.jpg";
 
 function AboutUs() {
   return (
     <Flex w="100vw" h="100vh" justify="space-between">
       <Box w="50vw" h="100vh" left="0">
-        <Image
+        <img
           className="landscape"
           src={landscape}
           alt="Landscape"

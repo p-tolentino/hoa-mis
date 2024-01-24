@@ -9,7 +9,7 @@ import {
   Heading,
   Spacer,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const colors = {
   selected: "#E9C850",
@@ -106,8 +106,8 @@ function Navbar() {
       </HStack>
       <Spacer />
       <Button
-        as={NavLink}
-        to="/login"
+        // as={NavLink}
+        // to="/login"
         colorScheme="yellow"
         borderRadius="5"
         onClick={resetColors}
