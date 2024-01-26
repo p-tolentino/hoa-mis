@@ -2,19 +2,22 @@
 
 import * as z from "zod";
 import { signIn } from "@/auth";
-import { LoginSchema } from "@/schemas";
-import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { LoginSchema } from "@/backend/schemas";
+import { DEFAULT_LOGIN_REDIRECT } from "@/backend/routes";
 import {
   generateVerificationToken,
   generateTwoFactorToken,
-} from "@/lib/tokens";
-import { sendVerificationEmail, sendTwoFactorTokenEmail } from "@/lib/mail";
+} from "@/backend/lib/tokens";
+import {
+  sendVerificationEmail,
+  sendTwoFactorTokenEmail,
+} from "@/backend/lib/mail";
 
 import { AuthError } from "next-auth";
-import { getUserByEmail } from "@/data/user";
-import { getTwoFactorTokenByEmail } from "@/data/two-factor-token";
-import { db } from "@/lib/db";
-import { getTwoFactorConfirmationByUserId } from "@/data/two-factor-confirmation";
+import { getUserByEmail } from "@/backend/data/user";
+import { getTwoFactorTokenByEmail } from "@/backend/data/two-factor-token";
+import { db } from "@/backend/lib/db";
+import { getTwoFactorConfirmationByUserId } from "@/backend/data/two-factor-confirmation";
 
 export const login = async (
   values: z.infer<typeof LoginSchema>,

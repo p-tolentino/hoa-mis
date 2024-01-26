@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { useCurrentUser } from "@/hooks/use-current-user";
+import { useCurrentUser } from "@/backend/hooks/use-current-user";
 import { LogoutButton } from "./logout-button";
 
 import { FaUser as User } from "react-icons/fa";
