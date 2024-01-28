@@ -41,13 +41,14 @@ function Navbar () {
         </Heading>
         <Box ml='20px'>
           <Heading paddingTop='5px' size='md'>
-            System Name
+            <Link href='#'>System Name</Link>
           </Heading>
         </Box>
       </Flex>
       <Spacer />
       <HStack gap='10'>
         <Link
+          href='#'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'
@@ -59,6 +60,7 @@ function Navbar () {
           About
         </Link>
         <Link
+          href='#facilitiesSection'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'
@@ -81,6 +83,7 @@ function Navbar () {
           Policies
         </Link>
         <Link
+          href='#contactUsSection'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'

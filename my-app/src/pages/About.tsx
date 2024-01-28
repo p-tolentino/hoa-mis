@@ -10,7 +10,7 @@ import {
 // import Image from "next/image";
 import landscapeLowerOpacity from '../images/landscapeLowerOpacity.png'
 import tempModuleIcon from '../images/tempModuleIcon.png'
-function AboutUs () {
+function About () {
   return (
     <Box>
       <Center bgImage={landscapeLowerOpacity} h='30vh' bgSize={'cover'}>
@@ -225,4 +225,4 @@ function AboutUs () {
     </Box>
   )
 }
-export default AboutUs
+export default About
