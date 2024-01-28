@@ -1,15 +1,7 @@
 import { useState } from 'react'
 import { MdComputer as Logo } from 'react-icons/md'
-import {
-  Link,
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  Spacer
-} from '@chakra-ui/react'
-// import { NavLink } from "react-router-dom";
+import { Link, Box, Flex, HStack, Heading, Spacer } from '@chakra-ui/react'
+import SignInButton from './SignInButton'
 
 const colors = {
   selected: '#E9C850',
@@ -23,9 +15,6 @@ function Navbar () {
     setClickedLinkId(linkId)
   }
 
-  const resetColors = () => {
-    setClickedLinkId('')
-  }
   return (
     <Flex
       as='nav'
@@ -34,6 +23,8 @@ function Navbar () {
       bg='brand.500'
       color='white'
       wrap='wrap'
+      pos='sticky'
+      top='0'
     >
       <Flex>
         <Heading ml='10px' color='white' size='xl'>
@@ -41,14 +32,14 @@ function Navbar () {
         </Heading>
         <Box ml='20px'>
           <Heading paddingTop='5px' size='md'>
-            <Link href='#'>System Name</Link>
+            <Link href='/'>System Name</Link>
           </Heading>
         </Box>
       </Flex>
       <Spacer />
       <HStack gap='10'>
         <Link
-          href='#'
+          href='/'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'
@@ -60,7 +51,7 @@ function Navbar () {
           About
         </Link>
         <Link
-          href='#facilitiesSection'
+          href='/#facilitiesSection'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'
@@ -83,7 +74,7 @@ function Navbar () {
           Policies
         </Link>
         <Link
-          href='#contactUsSection'
+          href='/#contactUsSection'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'
@@ -96,15 +87,7 @@ function Navbar () {
         </Link>
       </HStack>
       <Spacer />
-      <Button
-        // as={NavLink}
-        // to="/login"
-        colorScheme='yellow'
-        borderRadius='5'
-        onClick={resetColors}
-      >
-        Sign in
-      </Button>
+      <SignInButton />
     </Flex>
   )
 }
