@@ -1,15 +1,15 @@
-import { Container } from "@chakra-ui/react";
+import { Container } from '@chakra-ui/react'
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavbarLayout from "./layouts/NavbarLayout";
+import NavbarLayout from './layouts/NavbarLayout'
 
-import LOGIN from "./pages/Login";
+import LOGIN from './pages/Login'
 
-import ABOUT_US from "./pages/AboutUs";
-import FACILITIES from "./pages/Facilities";
+import ABOUT from './pages/About'
+import FACILITIES from './pages/Facilities'
 // import POLICIES from "./pages/policies";
-import CONTACT_US from "./pages/ContactUs";
+import CONTACT_US from './pages/ContactUs'
 
-function App() {
+function App () {
   return (
     // <div className="App">
     //   <BrowserRouter>
@@ -27,14 +27,14 @@ function App() {
     //     </Routes>
     //   </BrowserRouter>
     // </div>
-    <Container maxW="100%" px="0">
+    <Container maxW='100%' px='0'>
       <NavbarLayout />
-      <LOGIN />
-      {/* <ABOUT_US /> */}
-      {/* <FACILITIES /> */}
-      {/* <CONTACT_US /> */}
+      {/* <LOGIN /> */}
+      <ABOUT />
+      <FACILITIES />
+      <CONTACT_US />
     </Container>
-  );
+  )
 }
 
-export default App;
+export default App
