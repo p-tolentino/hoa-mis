@@ -18,7 +18,7 @@ function ContactUs() {
   const [message, setMessage] = useState("");
 
   return (
-    <Flex>
+    <Flex id="contactUsSection" mx={"3rem"}>
       <Container
         id="contact_us"
         maxW={{ base: "90%", md: "900px" }}
