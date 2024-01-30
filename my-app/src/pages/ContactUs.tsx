@@ -114,47 +114,14 @@ function ContactUs() {
               </Text>
               <Text
                 as="a"
-                href="mailto:alessandra_maxine_feliciano@dlsu.edu.ph"
+                href="mailto:Info@systemname.com"
                 fontSize={{ base: "10px", md: "12px" }}
                 fontStyle="normal"
                 fontWeight={{ base: "400px", md: "300px" }}
                 color="white"
               >
                 <Icon as={EmailIcon} />
-                alessandra_maxine_feliciano@dlsu.edu.ph
-              </Text>
-              <Text
-                as="a"
-                href="mailto:diego_pallasigue@dlsu.edu.ph"
-                fontSize={{ base: "10px", md: "12px" }}
-                fontStyle="normal"
-                fontWeight={{ base: "400px", md: "300px" }}
-                color="white"
-              >
-                <Icon as={EmailIcon} />
-                diego_pallasigue@dlsu.edu.ph
-              </Text>
-              <Text
-                as="a"
-                href="mailto:kathleen_tan@dlsu.edu.ph"
-                fontSize={{ base: "10px", md: "12px" }}
-                fontStyle="normal"
-                fontWeight={{ base: "400px", md: "300px" }}
-                color="white"
-              >
-                <Icon as={EmailIcon} />
-                kathleen_tan@dlsu.edu.ph
-              </Text>
-              <Text
-                as="a"
-                href="mailto:philip_tolentino@dlsu.edu.ph"
-                fontSize={{ base: "10px", md: "12px" }}
-                fontStyle="normal"
-                fontWeight={{ base: "400px", md: "300px" }}
-                color="white"
-              >
-                <Icon as={EmailIcon} />
-                philip_tolentino@dlsu.edu.ph
+                Info@systemname.com
               </Text>
             </Box>
           </Flex>
