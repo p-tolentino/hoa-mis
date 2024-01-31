@@ -5,9 +5,6 @@ import NAVBAR from '../components/Navbar'
 const NavbarLayout = () => (
   <Box className='App' pos={'sticky'} w='100%' top={0}>
     <NAVBAR />
-    {/* <div className="pages" style={{ margin: 30 }}>
-      <Outlet />
-    </div> */}
   </Box>
 )
 
