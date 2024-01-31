@@ -39,21 +39,21 @@ function SignUp() {
               Welcome! Fill up your account
             </Text>
           </Box>
-          <FormControl id="firstname">
+          <FormControl id="firstname" isRequired>
             <FormLabel>First Name</FormLabel>
             <Input placeholder="First Name" type="string" />
           </FormControl>
-          <FormControl id="lastname">
+          <FormControl id="lastname" isRequired>
             <FormLabel>Last Name</FormLabel>
             <Input placeholder="Last Name" type="string" />
           </FormControl>
-          <FormControl id="email">
-            <FormLabel>Email Address</FormLabel>
-            <Input placeholder="email@address.com" type="string" />
+          <FormControl id="username" isRequired>
+            <FormLabel>Username</FormLabel>
+            <Input placeholder="firstname_lastname" type="string" />
           </FormControl>
-          <FormControl id="password">
+          <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
-            <Input placeholder="*****" type="password" />
+            <Input placeholder="******" type="password" />
           </FormControl>
           <Stack spacing={2} mt="20px">
             <Button type="submit" colorScheme="yellow" borderRadius="10">

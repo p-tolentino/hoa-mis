@@ -53,15 +53,15 @@ function SignIn() {
                 Google
               </Button>
               <Text size="sm" textAlign="center" color="gray" mt="5" mb="5">
-                or Sign in using Email Address
+                or Sign in using your Username
               </Text>
-              <FormControl id="email">
-                <FormLabel>Email Address</FormLabel>
-                <Input placeholder="email@address.com" type="string" />
+              <FormControl id="username">
+                <FormLabel>Username</FormLabel>
+                <Input placeholder="firstname_lastname" type="string" />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
-                <Input placeholder="*****" type="password" />
+                <Input placeholder="******" type="password" />
               </FormControl>
               <HStack alignSelf="center">
                 <Text fontSize="14px" textAlign="center" color="gray">

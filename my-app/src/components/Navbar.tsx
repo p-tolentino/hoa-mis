@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { MdComputer as Logo } from "react-icons/md";
-import { Link, Box, Flex, HStack, Heading, Spacer } from "@chakra-ui/react";
+import {
+  Link,
+  Box,
+  Flex,
+  HStack,
+  Heading,
+  Spacer,
+  Text,
+} from "@chakra-ui/react";
 import SignInButton from "./SignInButton";
 
 const colors = {
@@ -32,7 +40,9 @@ function Navbar() {
         </Heading>
         <Box ml="20px">
           <Heading paddingTop="5px" size="md">
-            <Link href="/">System Name</Link>
+            <Text as="a" rel="noopener" href="/">
+              System Name
+            </Text>
           </Heading>
         </Box>
       </Flex>
