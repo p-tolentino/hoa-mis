@@ -1,13 +1,4 @@
-import {
-  Flex,
-  Text,
-  Icon,
-  Link,
-  Menu,
-  MenuButton,
-  // MenuList,
-  Box
-} from '@chakra-ui/react'
+import { Flex, Text, Icon, Link, Menu, MenuButton, Box } from '@chakra-ui/react'
 
 export default function SidebarItem ({
   icon,
@@ -22,9 +13,10 @@ export default function SidebarItem ({
 }) {
   return (
     <Box
-      mt={30}
+      mt={'1.4rem'}
       w='100%'
       alignItems={sidebarSize === 'small' ? 'center' : 'left'}
+      fontSize={'sm'}
     >
       <Menu placement='right'>
         <Link
@@ -57,14 +49,6 @@ export default function SidebarItem ({
             </Flex>
           </MenuButton>
         </Link>
-        {/* <MenuList
-          py={0}
-          border='none'
-          w={200}
-          h={200}
-          bgColor={'brand.400'}
-          opacity={0}
-        ></MenuList> */}
       </Menu>
     </Box>
   )

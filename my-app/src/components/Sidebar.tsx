@@ -18,7 +18,7 @@ import {
   FiUserCheck
 } from 'react-icons/fi'
 import { BsNewspaper } from 'react-icons/bs'
-import { PiBroomFill } from 'react-icons/pi'
+import { PiBinocularsBold, PiBroomFill } from 'react-icons/pi'
 import SidebarItem from '../components/SidebarItem'
 import { NavLink } from 'react-router-dom'
 
@@ -27,11 +27,8 @@ export default function Sidebar () {
   return (
     <Flex
       pos='sticky'
-      left='5'
-      h='95vh'
-      marginTop='2.5vh'
-      boxShadow='0 4px 12px 0 rgba(0, 0, 0, 0.05)'
-      borderRadius={sidebarSize === 'small' ? '15px' : '20px'}
+      top={0}
+      h='100vh'
       w={sidebarSize === 'small' ? '75px' : '280px'}
       flexDir='column'
       justifyContent='space-between'
@@ -48,7 +45,6 @@ export default function Sidebar () {
         <IconButton
           background='none'
           color={'white'}
-          mt={5}
           _hover={{ background: 'none' }}
           icon={<FiMenu />}
           onClick={() => {
@@ -83,13 +79,13 @@ export default function Sidebar () {
         />
         <SidebarItem
           sidebarSize={sidebarSize}
-          icon={FiDollarSign}
+          icon={FiBriefcase}
           title='Dispute Resolution'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
-          icon={FiBriefcase}
+          icon={PiBinocularsBold}
           title='Violation Monitoring'
           active={false}
         />
@@ -120,7 +116,10 @@ export default function Sidebar () {
         alignItems={sidebarSize === 'small' ? 'center' : 'flex-start'}
         mb={4}
       >
-        <Divider display={sidebarSize === 'small' ? 'none' : 'flex'} />
+        <Divider
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
+          mt={'1rem'}
+        />
         <Flex mt={4} align='center'>
           <Avatar size='sm' src='avatar-1.jpg' />
           <Flex
@@ -134,13 +133,25 @@ export default function Sidebar () {
             <Text color='brand.300'>Admin</Text>
           </Flex>
         </Flex>
-        <Flex mt={6} display={sidebarSize === 'small' ? 'none' : 'flex'}>
+        <Flex
+          mt={3}
+          fontSize={'sm'}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
+        >
           <Text as={Link}>Settings</Text>
         </Flex>
-        <Flex mt={2} display={sidebarSize === 'small' ? 'none' : 'flex'}>
+        <Flex
+          mt={2}
+          fontSize={'sm'}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
+        >
           <Text as={Link}>My Account</Text>
         </Flex>
-        <Flex mt={2} display={sidebarSize === 'small' ? 'none' : 'flex'}>
+        <Flex
+          mt={2}
+          fontSize={'sm'}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
+        >
           <Text as={NavLink} to={'/'}>
             Sign Out
           </Text>
