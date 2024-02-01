@@ -110,6 +110,7 @@ function Navbar() {
           to={"membership-menu"}
           _hover={{ color: "#E9C850" }}
           padding="10px"
+          fontFamily="cabin variable"
           px="20px"
           onClick={() => handleLinkClick("test membership module")}
           color={
