@@ -5,7 +5,8 @@ import {
   Center,
   SimpleGrid,
   Box,
-  Image
+  Image,
+  Flex
 } from '@chakra-ui/react'
 // import Image from "next/image";
 import landscapeLowerOpacity from '../images/landscapeLowerOpacity.png'
@@ -14,22 +15,24 @@ function About () {
   return (
     <Box>
       <Center bgImage={landscapeLowerOpacity} h='30vh' bgSize={'cover'}>
-        <Stack
-          direction={'column'}
-          alignItems={'center'}
-          textAlign={'center'}
-          p='2rem'
-        >
-          <Heading size={'2xl'}>System Name</Heading>
-          <Text
-            fontSize='1rem'
+        <Flex bgColor={'rgba(255, 255, 255, 0.6)'}>
+          <Stack
+            direction={'column'}
+            alignItems={'center'}
             textAlign={'center'}
-            textShadow='1px 1px grey.05'
+            p='2rem'
           >
-            A Management Information System (MIS) for Homeowners' Associations
-            in the Philippines.
-          </Text>
-        </Stack>
+            <Heading size={'2xl'}>System Name</Heading>
+            <Text
+              fontSize='1.5rem'
+              textAlign={'center'}
+              textShadow='1px 1px grey.05'
+            >
+              A Management Information System (MIS) for Homeowners' Associations
+              in the Philippines.
+            </Text>
+          </Stack>
+        </Flex>
       </Center>
       <SimpleGrid
         columns={4}

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "@fontsource-variable/cabin";
-import "@fontsource-variable/montserrat";
 import { MdComputer as Logo } from "react-icons/md";
 import {
   Link,
@@ -12,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import SignInButton from "./SignInButton";
+import { NavLink } from "react-router-dom";
 
 const colors = {
   selected: "#E9C850",
@@ -105,6 +104,21 @@ function Navbar() {
           }
         >
           Contact Us
+        </Link>
+        <Link
+          as={NavLink}
+          to={"membership-menu"}
+          _hover={{ color: "#E9C850" }}
+          padding="10px"
+          px="20px"
+          onClick={() => handleLinkClick("test membership module")}
+          color={
+            clickedLinkId === "test membership module"
+              ? colors.selected
+              : colors.unselected
+          }
+        >
+          Test Membership Module
         </Link>
       </HStack>
       <Spacer />
