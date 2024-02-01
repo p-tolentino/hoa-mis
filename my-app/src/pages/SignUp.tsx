@@ -9,6 +9,7 @@ import {
   Button,
   Heading,
   Text,
+  Select,
 } from "@chakra-ui/react";
 
 function SignUp() {
@@ -16,11 +17,12 @@ function SignUp() {
     <Box>
       <NAVBAR />
       <Flex
-        w="100vw"
-        h="100vh"
+        w="100%"
+        h="100%"
         justify="center"
         alignItems="center"
-        border="1px blue solid"
+        mt="20"
+        mb="20"
       >
         <Stack
           w="full"
@@ -32,31 +34,117 @@ function SignUp() {
           bg="white"
         >
           <Box mb="10px">
-            <Heading size="lg" textAlign="center" mb="3">
+            <Heading
+              size="lg"
+              fontFamily="montserrat variable"
+              textAlign="center"
+              mb="3"
+            >
               Sign up
             </Heading>
-            <Text size="sm" textAlign="center" color="gray" mb="5">
+            <Text
+              size="sm"
+              fontFamily="cabin variable"
+              textAlign="center"
+              color="gray"
+              mb="5"
+            >
               Welcome! Fill up your account
             </Text>
           </Box>
-          <FormControl id="firstname" isRequired>
-            <FormLabel>First Name</FormLabel>
-            <Input placeholder="First Name" type="string" />
+          <FormControl id="username" isRequired pos={"static"}>
+            <FormLabel fontFamily="cabin variable">Email Address</FormLabel>
+            <Input
+              pos={"static"}
+              fontFamily="cabin variable"
+              placeholder="email.address@gmail.com"
+              type="string"
+            />
           </FormControl>
-          <FormControl id="lastname" isRequired>
-            <FormLabel>Last Name</FormLabel>
-            <Input placeholder="Last Name" type="string" />
+          <FormControl id="password" isRequired pos={"static"}>
+            <FormLabel fontFamily="cabin variable">Password</FormLabel>
+            <Input pos={"static"} placeholder="******" type="password" />
           </FormControl>
-          <FormControl id="username" isRequired>
-            <FormLabel>Username</FormLabel>
-            <Input placeholder="firstname_lastname" type="string" />
+          <Heading
+            size="md"
+            fontFamily="montserrat variable"
+            textAlign="left"
+            mb="3"
+            mt="5"
+          >
+            Personal Information
+          </Heading>
+          <FormControl id="firstname" isRequired pos={"static"}>
+            <FormLabel fontFamily="cabin variable">First Name</FormLabel>
+            <Input
+              pos={"static"}
+              fontFamily="cabin variable"
+              placeholder="First Name"
+              type="string"
+            />
           </FormControl>
-          <FormControl id="password" isRequired>
-            <FormLabel>Password</FormLabel>
-            <Input placeholder="******" type="password" />
+          <FormControl id="middlename" isRequired pos={"static"}>
+            <FormLabel fontFamily="cabin variable">Middle Name</FormLabel>
+            <Input
+              pos={"static"}
+              fontFamily="cabin variable"
+              placeholder="Middle Name"
+              type="string"
+            />
           </FormControl>
+          <FormControl id="lastname" isRequired pos={"static"}>
+            <FormLabel fontFamily="cabin variable">Last Name</FormLabel>
+            <Input
+              pos={"static"}
+              fontFamily="cabin variable"
+              placeholder="Last Name"
+              type="string"
+            />
+          </FormControl>
+          <FormControl id="contactnumber" isRequired pos={"static"}>
+            <FormLabel fontFamily="cabin variable">Contact Number</FormLabel>
+            <Input
+              pos={"static"}
+              fontFamily="cabin variable"
+              placeholder="Contact Number"
+              type="int"
+            />
+          </FormControl>
+          <Heading
+            size="md"
+            fontFamily="montserrat variable"
+            textAlign="left"
+            mb="3"
+            mt="5"
+          >
+            Property Information
+          </Heading>
+          <Select
+            fontFamily="cabin variable"
+            placeholder="Lot number"
+            color="gray"
+          >
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </Select>
+          <Select
+            fontFamily="cabin variable"
+            placeholder="Street Name"
+            color="gray"
+          >
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </Select>
           <Stack spacing={2} mt="20px">
-            <Button type="submit" colorScheme="yellow" borderRadius="10">
+            <Button
+              type="submit"
+              colorScheme="yellow"
+              borderRadius="10"
+              fontFamily="cabin variable"
+              fontWeight="800"
+            >
               Sign up
             </Button>
           </Stack>

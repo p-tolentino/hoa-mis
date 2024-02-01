@@ -9,9 +9,6 @@ import {
   Input,
   Heading,
 } from "@chakra-ui/react";
-// import "@fontsource/cabin";
-import { Icon } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 
 function ContactUs() {
@@ -27,12 +24,13 @@ function ContactUs() {
         maxW={{ base: "90%", md: "650px" }}
         py={{ base: "25px", md: "50px" }}
         pt={{ base: "100px", md: "50px" }}
+        mt="50"
       >
         <Stack>
           <Box p="20px">
             <Heading
               size={{ base: "md", md: "lg" }}
-              fontStyle="bold"
+              fontFamily="montserrat variable"
               fontWeight={{ base: "650", md: "800" }}
               lineHeight={{ base: "20px", md: "30px" }}
               textAlign="center"
@@ -41,6 +39,7 @@ function ContactUs() {
               Contact Us
             </Heading>
             <Text
+              fontFamily="cabin variable"
               fontSize={{ base: "10px", md: "12px" }}
               fontWeight={{ base: "400px", md: "600px" }}
               align="center"
@@ -65,73 +64,74 @@ function ContactUs() {
             >
               <Text
                 fontSize={{ base: "12px", md: "16px" }}
-                fontStyle="bold"
+                fontFamily="cabin variable"
                 fontWeight={{ base: "300px", md: "600px" }}
                 lineHeight="49px"
               >
                 Full Name
               </Text>
               <Input
+                pos={"static"}
                 placeholder="Full Name"
                 type="email"
-                //   rows="1"
                 fontSize={{ base: "10px", md: "14px" }}
                 onChange={(e) => setFullname(e.target.value)}
               />
               <Text
+                fontFamily="cabin variable"
                 fontSize={{ base: "12px", md: "16px" }}
-                fontStyle="bold"
                 fontWeight={{ base: "300px", md: "600px" }}
                 lineHeight="49px"
               >
                 Phone Number
               </Text>
               <Input
+                pos={"static"}
                 placeholder="Phone Number"
                 type="email"
-                //   rows="1"
                 fontSize={{ base: "10px", md: "14px" }}
                 onChange={(e) => setPhonenumber(e.target.value)}
               />
               <Text
+                fontFamily="cabin variable"
                 fontSize={{ base: "12px", md: "16px" }}
-                fontStyle="bold"
                 fontWeight={{ base: "300px", md: "600px" }}
                 lineHeight="49px"
               >
                 Email Address
               </Text>
               <Input
+                pos={"static"}
                 placeholder="Email Address"
                 type="email"
-                //   rows="1"
                 fontSize={{ base: "10px", md: "14px" }}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <Text
+                fontFamily="cabin variable"
                 fontSize={{ base: "12px", md: "16px" }}
-                fontStyle="bold"
                 fontWeight={{ base: "300px", md: "600px" }}
                 lineHeight="49px"
               >
                 Subject
               </Text>
               <Input
+                pos={"static"}
                 placeholder="Subject"
                 type="email"
-                //   rows="1"
                 fontSize={{ base: "10px", md: "14px" }}
                 onChange={(e) => setSubject(e.target.value)}
               />
               <Text
+                fontFamily="cabin variable"
                 fontSize={{ base: "12px", md: "16px" }}
-                fontStyle="bold"
                 fontWeight={{ base: "300px", md: "600px" }}
                 lineHeight="49px"
               >
                 Message
               </Text>
               <Textarea
+                pos={"static"}
                 placeholder="Enter a message"
                 fontSize={{ base: "10px", md: "14px" }}
                 h={{ base: "50px", md: "200px" }}
@@ -140,13 +140,18 @@ function ContactUs() {
               <Button
                 as="a"
                 href={
-                  "mailto:info@cncdevcorp.com?subject=" +
+                  "mailto:info@systemname.com?subject=" +
                   subject +
                   "&body=" +
-                  message
+                  message +
+                  fullname +
+                  email +
+                  phonenumber
                 }
                 variant="solid"
-                backgroundColor="#E9C850"
+                colorScheme="yellow"
+                fontFamily="cabin variable"
+                fontWeight={{ base: "650", md: "800" }}
                 fontSize={{ base: "10px", md: "14px" }}
                 borderRadius={10}
                 marginTop="3"

@@ -1,6 +1,8 @@
 import { Box, Container, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
+import "@fontsource-variable/cabin";
+import "@fontsource-variable/montserrat";
 
 function Footer() {
   return (
@@ -18,11 +20,11 @@ function Footer() {
               w={{ base: "60px", md: "100px" }}
               filter="brightness(1000%)"
             /> */}
-          <Heading size="lg" color="white" fontStyle="cabin">
+          <Heading size="lg" color="white" fontFamily="cabin variable">
             LOGO
           </Heading>
           <Text
-            fontStyle="cabin"
+            fontFamily="cabin variable"
             fontSize={{ base: "8px", md: "10px" }}
             color="white"
             py="2"
@@ -41,7 +43,7 @@ function Footer() {
           <Flex
             direction="column"
             color="white"
-            fontStyle="cabin"
+            fontFamily="cabin variable"
             fontWeight="normal"
             fontSize={{ base: "10px", md: "10px" }}
             py={{ base: "8px" }}
@@ -52,11 +54,11 @@ function Footer() {
             <Text as="a" rel="noopener" href="/">
               ABOUT US
             </Text>
-            <Text as="a" rel="noopener" href="/#facilities">
-              FACILITIES
+            <Text as="a" rel="noopener" href="/#registerHOA">
+              REGISTER HOA
             </Text>
             <Text as="a" rel="noopener" href="/#policies">
-              POLICIES
+              TERMS AND CONDITIONS
             </Text>
             <Text as="a" rel="noopener" href="/#contactUs">
               CONTACT US
@@ -64,7 +66,7 @@ function Footer() {
           </Flex>
           <Flex
             color="white"
-            fontStyle="cabin"
+            fontFamily="cabin variable"
             fontWeight="normal"
             fontSize={{ base: "10px", md: "10px" }}
             direction="column"
@@ -73,7 +75,7 @@ function Footer() {
           >
             <Text
               py="5px"
-              fontSize={{ base: "11px", md: "10px" }}
+              fontSize={{ base: "10px", md: "10px" }}
               fontWeight="bold"
             >
               CONTACT INFO

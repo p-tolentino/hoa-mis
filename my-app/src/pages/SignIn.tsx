@@ -32,10 +32,20 @@ function SignIn() {
               bg="white"
             >
               <Box mb="10px">
-                <Heading size="lg" textAlign="left">
+                <Heading
+                  size="lg"
+                  textAlign="left"
+                  fontFamily="montserrat variable"
+                >
                   Sign in
                 </Heading>
-                <Text size="sm" textAlign="left" color="gray" mb="5">
+                <Text
+                  size="sm"
+                  fontFamily="cabin variable"
+                  textAlign="left"
+                  color="gray"
+                  mb="5"
+                >
                   Welcome Back! Sign in using Google
                 </Text>
               </Box>
@@ -49,30 +59,58 @@ function SignIn() {
                     style={{ width: "30px" }}
                   />
                 }
+                fontFamily="cabin variable"
               >
                 Google
               </Button>
-              <Text size="sm" textAlign="center" color="gray" mt="5" mb="5">
-                or Sign in using your Username
+              <Text
+                size="sm"
+                fontFamily="cabin variable"
+                textAlign="center"
+                color="gray"
+                mt="5"
+                mb="5"
+              >
+                or Sign in using Email Address
               </Text>
               <FormControl id="username">
-                <FormLabel>Username</FormLabel>
-                <Input placeholder="firstname_lastname" type="string" />
+                <FormLabel fontFamily="cabin variable">Email Address</FormLabel>
+                <Input
+                  fontFamily="cabin variable"
+                  placeholder="email.address@gmail.com"
+                  type="string"
+                />
               </FormControl>
               <FormControl id="password">
-                <FormLabel>Password</FormLabel>
+                <FormLabel fontFamily="cabin variable">Password</FormLabel>
                 <Input placeholder="******" type="password" />
               </FormControl>
               <HStack alignSelf="center">
-                <Text fontSize="14px" textAlign="center" color="gray">
+                <Text
+                  fontSize="14px"
+                  fontFamily="cabin variable"
+                  textAlign="center"
+                  color="gray"
+                >
                   Don't have an account yet?
                 </Text>
-                <Link href="sign-up" fontSize="14px" color="blue">
+                <Link
+                  href="sign-up"
+                  fontFamily="cabin variable"
+                  fontSize="14px"
+                  color="blue"
+                >
                   Sign up
                 </Link>
               </HStack>
               <Stack spacing={2} mt="20px">
-                <Button type="submit" colorScheme="yellow" borderRadius="10">
+                <Button
+                  type="submit"
+                  colorScheme="yellow"
+                  borderRadius="10"
+                  fontFamily="cabin variable"
+                  fontWeight="800"
+                >
                   Sign in
                 </Button>
               </Stack>

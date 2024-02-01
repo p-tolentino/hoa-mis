@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "@fontsource-variable/cabin";
+import "@fontsource-variable/montserrat";
 import { MdComputer as Logo } from "react-icons/md";
 import {
   Link,
@@ -40,7 +42,12 @@ function Navbar() {
         </Heading>
         <Box ml="20px">
           <Heading paddingTop="5px" size="md">
-            <Text as="a" rel="noopener" href="/">
+            <Text
+              as="a"
+              rel="noopener"
+              href="/"
+              fontFamily="montserrat variable"
+            >
               System Name
             </Text>
           </Heading>
@@ -52,6 +59,7 @@ function Navbar() {
           href="/"
           _hover={{ color: "#E9C850" }}
           padding="10px"
+          fontFamily="cabin variable"
           px="20px"
           onClick={() => handleLinkClick("about us")}
           color={
@@ -61,32 +69,35 @@ function Navbar() {
           About
         </Link>
         <Link
-          href="/#facilities"
+          href="/#registerHOA"
           _hover={{ color: "#E9C850" }}
           padding="10px"
+          fontFamily="cabin variable"
           px="20px"
           onClick={() => handleLinkClick("facilities")}
           color={
             clickedLinkId === "facilities" ? colors.selected : colors.unselected
           }
         >
-          Facilities
+          Register HOA
         </Link>
         <Link
           _hover={{ color: "#E9C850" }}
           padding="10px"
+          fontFamily="cabin variable"
           px="20px"
           onClick={() => handleLinkClick("policies")}
           color={
             clickedLinkId === "policies" ? colors.selected : colors.unselected
           }
         >
-          Policies
+          Terms and Conditions
         </Link>
         <Link
           href="/#contactUs"
           _hover={{ color: "#E9C850" }}
           padding="10px"
+          fontFamily="cabin variable"
           px="20px"
           onClick={() => handleLinkClick("contact us")}
           color={
