@@ -34,6 +34,7 @@ export default function Sidebar () {
       justifyContent='space-between'
       bgColor={'brand.500'}
       color={'white'}
+      zIndex={3}
     >
       <Flex
         p={sidebarSize === 'small' ? '17%' : '5%'}
@@ -136,13 +137,14 @@ export default function Sidebar () {
             </Text>
           </Flex>
         </Flex>
+
         <Flex
           mt={3}
           fontSize={'sm'}
           display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
           <Text as={Link} fontFamily='font.body'>
-            Settings
+            My Profile
           </Text>
         </Flex>
         <Flex
@@ -151,7 +153,7 @@ export default function Sidebar () {
           display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
           <Text as={Link} fontFamily='font.body'>
-            My Account
+            Settings
           </Text>
         </Flex>
         <Flex

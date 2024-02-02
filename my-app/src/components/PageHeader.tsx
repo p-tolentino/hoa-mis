@@ -1,18 +1,33 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@chakra-ui/react'
 
 export default function PageHeader ({ title }: { title: string }) {
   return (
-    <Flex
+    <Box
       h={'max-content'}
-      p={'25px'}
+      p={'20px'}
       pos={'sticky'}
       top={'0'}
       bgColor={'#5B8060'}
       color={'white'}
+      zIndex={2}
     >
-      <Heading size={'lg'} fontFamily='font.heading'>
+      <Heading size={'lg'} fontFamily='font.heading' mb='2px'>
         {title}
       </Heading>
-    </Flex>
+      <Text
+        fontSize={{ sm: '12px', md: 'sm' }}
+        fontStyle={'italic'}
+        fontFamily={'font.body'}
+        color={'white'}
+        lineHeight={1.2}
+      >
+        Page instructions or description here... Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Distinctio, harum ab quis quos nesciunt
+        beatae, eos dolore quas cumque magni illum porro reprehenderit quia
+        vitae nihil doloribus. Tempora saepe neque reiciendis commodi quia
+        sapiente repellat nihil ut harum dolores! Saepe ex natus nam facere eos
+        amet distinctio.
+      </Text>
+    </Box>
   )
 }
