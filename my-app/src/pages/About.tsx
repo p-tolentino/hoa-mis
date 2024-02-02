@@ -60,8 +60,9 @@ function About() {
             alt="Membership Module"
             boxSize={"5rem"}
           ></Image>
+
           <Heading size="sm" fontFamily="montserrat variable">
-            Membership Module
+            Membership
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -85,8 +86,9 @@ function About() {
             alt="Finance Management Module"
             boxSize={"5rem"}
           ></Image>
+
           <Heading size="sm" fontFamily="montserrat variable">
-            Finance Management Module
+            Finance Management
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -111,7 +113,7 @@ function About() {
             boxSize={"5rem"}
           ></Image>
           <Heading size="sm" fontFamily="montserrat variable">
-            Community Engagement Module
+            Community Engagement
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -136,7 +138,7 @@ function About() {
             boxSize={"5rem"}
           ></Image>
           <Heading size="sm" fontFamily="montserrat variable">
-            Dispute Resolution Module
+            Dispute Resolution
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -161,7 +163,7 @@ function About() {
             boxSize={"5rem"}
           ></Image>
           <Heading size="sm" fontFamily="montserrat variable">
-            Violation Monitoring Module
+            Violation Monitoring 
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -186,7 +188,7 @@ function About() {
             boxSize={"5rem"}
           ></Image>
           <Heading size="sm" fontFamily="montserrat variable">
-            Facility Reservation Module
+            Facility Reservation
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -211,7 +213,7 @@ function About() {
             boxSize={"5rem"}
           ></Image>
           <Heading size="sm" fontFamily="montserrat variable">
-            Maintenance Handling Module
+            Maintenance Handling
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -236,7 +238,7 @@ function About() {
             boxSize={"5rem"}
           ></Image>
           <Heading size="sm" fontFamily="montserrat variable">
-            Election Management Module
+            Election Management 
           </Heading>
           <Text fontSize={"14px"} fontFamily="cabin variable">
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem

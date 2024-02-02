@@ -36,11 +36,11 @@ export default function Sidebar() {
       color={"white"}
     >
       <Flex
-        p="5%"
-        flexDir="column"
-        w="100%"
-        alignItems={sidebarSize === "small" ? "center" : "flex-start"}
-        as="nav"
+        p={sidebarSize === 'small' ? '17%' : '5%'}
+        flexDir='column'
+        w='100%'
+        alignItems={sidebarSize === 'small' ? 'center' : 'flex-start'}
+        as='nav'
       >
         <IconButton
           background="none"
@@ -51,7 +51,8 @@ export default function Sidebar() {
             if (sidebarSize === "small") changeSidebarSize("large");
             else changeSidebarSize("small");
           }}
-          aria-label={""}
+          aria-label={''}
+          alignSelf={'flex-start'}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
