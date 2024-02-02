@@ -1,18 +1,18 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading } from '@chakra-ui/react'
 
-export default function PageHeader({ title }: { title: string }) {
+export default function PageHeader ({ title }: { title: string }) {
   return (
     <Flex
-      h={"max-content"}
-      p={"25px"}
-      pos={"sticky"}
-      top={"0"}
-      bgColor={"#5B8060"}
-      color={"white"}
+      h={'max-content'}
+      p={'25px'}
+      pos={'sticky'}
+      top={'0'}
+      bgColor={'#5B8060'}
+      color={'white'}
     >
-      <Heading size={"lg"} fontFamily="montserrat variable">
+      <Heading size={'lg'} fontFamily='font.heading'>
         {title}
       </Heading>
     </Flex>
-  );
+  )
 }

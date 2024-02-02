@@ -4,6 +4,8 @@ import * as ReactDOM from 'react-dom/client'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorker from './serviceWorker'
+import '@fontsource-variable/cabin'
+import '@fontsource-variable/montserrat'
 
 const container = document.getElementById('root')
 if (!container) throw new Error('Failed to find the root element')
@@ -17,7 +19,15 @@ const colors = {
     300: '#F0CB5B' // Yellow
   }
 }
-const theme = extendTheme({ colors })
+
+const fonts = {
+  font: {
+    heading: 'montserrat variable',
+    body: 'cabin variable'
+  }
+}
+
+const theme = extendTheme({ colors, fonts })
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
