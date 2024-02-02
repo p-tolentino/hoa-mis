@@ -5,220 +5,165 @@ import {
   Text,
   Box,
   Textarea,
-  Spacer,
-  Input
-} from '@chakra-ui/react'
-// import "@fontsource/cabin";
-import { Icon } from '@chakra-ui/react'
-import { ArrowForwardIcon, EmailIcon } from '@chakra-ui/icons'
-import { useState } from 'react'
+  Stack,
+  Input,
+  Heading,
+} from "@chakra-ui/react";
+import { useState } from "react";
 
-function ContactUs () {
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
+function ContactUs() {
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
-    <Flex id='contactUsSection' mx={'3rem'}>
+    <Flex id="contactUs" mx={"3rem"}>
       <Container
-        id='contact_us'
-        maxW={{ base: '90%', md: '900px' }}
-        py={{ base: '25px', md: '50px' }}
-        pt={{ base: '100px', md: '80px' }}
+        maxW={{ base: "90%", md: "650px" }}
+        py={{ base: "25px", md: "50px" }}
+        pt={{ base: "100px", md: "50px" }}
+        mt="50"
       >
-        <Flex
-          direction={{ base: 'column', md: 'row' }}
-          border='1px solid #e8e8e8'
-          boxShadow='md'
-          borderRadius='xl'
-        >
-          <Flex
-            bgColor='brand.500'
-            opacity='90%'
-            direction='column'
-            borderTopLeftRadius={{ base: 'xl', md: 'xl' }}
-            borderTopRightRadius={{ base: 'xl', md: '0' }}
-            borderBottomLeftRadius={{ base: '0', md: 'xl' }}
-            px={{ base: '35px', md: '80px' }}
-            py={{ base: '35px', md: '50px' }}
-            width={{ base: '200', md: '450px' }}
-          >
-            <Box>
-              <Text
-                fontSize={{ base: '20px', md: '30px' }}
-                fontStyle='bold'
-                fontWeight={{ base: '650', md: '800' }}
-                lineHeight={{ base: '20px', md: '30px' }}
-                color='white'
-              >
-                Contact Us
-              </Text>
-              <Text
-                fontSize={{ base: '10px', md: '12px' }}
-                fontWeight={{ base: '400px', md: '600px' }}
-                lineHeight='30px'
-                color='white'
-              >
-                Fill up the form to contact
-              </Text>
-              <Text
-                fontSize={{ base: '12px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '600px' }}
-                lineHeight={{ base: '20px', md: '25px' }}
-                color='white'
-                marginTop={{ base: '4', md: '6' }}
-              >
-                Online Hours:
-              </Text>
-              <Text
-                fontSize={{ base: '10px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '300px' }}
-                marginTop={{ base: '1', md: '1.5' }}
-                color='white'
-              >
-                Monday-Friday 8:00AM-5:00PM
-              </Text>
-              <Text
-                fontSize={{ base: '12px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '600px' }}
-                lineHeight={{ base: '20px', md: '25px' }}
-                color='white'
-                marginTop={{ base: '4', md: '6' }}
-              >
-                Address:
-              </Text>
-              <Text
-                as='a'
-                rel='noopener'
-                target='_blank'
-                href='https://maps.app.goo.gl/6jai6r2Lv8Fx3PvQA'
-                fontSize={{ base: '10px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '300px' }}
-                color='white'
-              >
-                2401 Taft Ave, Malate, Manila, 1004 Metro Manila
-                <Icon as={ArrowForwardIcon} />
-              </Text>
-              <Text
-                fontSize={{ base: '12px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '600px' }}
-                lineHeight={{ base: '20px', md: '25px' }}
-                color='white'
-                marginTop={{ base: '4', md: '6' }}
-              >
-                Email Addresses:
-              </Text>
-              <Text
-                as='a'
-                href='mailto:alessandra_maxine_feliciano@dlsu.edu.ph'
-                fontSize={{ base: '10px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '300px' }}
-                color='white'
-              >
-                <Icon as={EmailIcon} /> alessandra_maxine_feliciano@dlsu.edu.ph
-              </Text>
-              <Spacer />
-              <Text
-                as='a'
-                href='mailto:diego_pallasigue@dlsu.edu.ph'
-                fontSize={{ base: '10px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '300px' }}
-                color='white'
-              >
-                <Icon as={EmailIcon} /> diego_pallasigue@dlsu.edu.ph
-              </Text>
-              <Spacer />
-              <Text
-                as='a'
-                href='mailto:kathleen_tan@dlsu.edu.ph'
-                fontSize={{ base: '10px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '300px' }}
-                color='white'
-              >
-                <Icon as={EmailIcon} /> kathleen_tan@dlsu.edu.ph
-              </Text>
-              <Spacer />
-              <Text
-                as='a'
-                href='mailto:philip_tolentino@dlsu.edu.ph'
-                fontSize={{ base: '10px', md: '12px' }}
-                fontStyle='normal'
-                fontWeight={{ base: '400px', md: '300px' }}
-                color='white'
-              >
-                <Icon as={EmailIcon} /> philip_tolentino@dlsu.edu.ph
-              </Text>
-            </Box>
-          </Flex>
-          <Spacer />
-          <Flex
-            alignContent='center'
-            direction='column'
-            backgroundColor='white'
-            borderTopRightRadius={{ base: '0', md: 'xl' }}
-            borderTopLeftRadius='0'
-            borderBottomRightRadius={{ base: 'xl', md: 'xl' }}
-            borderBottomLeftRadius={{ base: 'xl', md: '0' }}
-            width={{ base: '200', md: '450px' }}
-            padding={{ base: '5', md: '10' }}
-          >
+        <Stack>
+          <Box p="20px">
+            <Heading
+              size={{ base: "md", md: "lg" }}
+              fontFamily="montserrat variable"
+              fontWeight={{ base: "650", md: "800" }}
+              lineHeight={{ base: "20px", md: "30px" }}
+              textAlign="center"
+              color="black"
+            >
+              Contact Us
+            </Heading>
             <Text
-              fontSize={{ base: '12px', md: '16px' }}
-              fontStyle='bold'
-              fontWeight={{ base: '300px', md: '600px' }}
-              lineHeight='49px'
+              fontFamily="cabin variable"
+              fontSize={{ base: "10px", md: "12px" }}
+              fontWeight={{ base: "400px", md: "600px" }}
+              align="center"
+              lineHeight="30px"
+              color="black"
             >
-              Subject
+              Fill up the form to contact
             </Text>
-            <Input
-              placeholder='Subject'
-              type='email'
-              //   rows="1"
-              fontSize={{ base: '10px', md: '14px' }}
-              onChange={e => setSubject(e.target.value)}
-            />
-            <Text
-              fontSize={{ base: '12px', md: '16px' }}
-              fontStyle='bold'
-              fontWeight={{ base: '300px', md: '600px' }}
-              lineHeight='49px'
+          </Box>
+          <Flex
+            direction={{ base: "column", md: "column" }}
+            border="1px solid #e8e8e8"
+            boxShadow="xl"
+            borderRadius="xl"
+          >
+            <Flex
+              alignSelf="center"
+              direction="column"
+              backgroundColor="white"
+              width={{ base: "200", md: "600px" }}
+              padding={{ base: "5", md: "10" }}
             >
-              Message
-            </Text>
-            <Textarea
-              placeholder='Enter a message'
-              fontSize={{ base: '10px', md: '14px' }}
-              h={{ base: '50px', md: '200px' }}
-              onChange={e => setMessage(e.target.value)}
-            />
-            <Button
-              as='a'
-              href={
-                'mailto:info@cncdevcorp.com?subject=' +
-                subject +
-                '&body=' +
-                message
-              }
-              variant='solid'
-              backgroundColor='#E9C850'
-              fontSize={{ base: '10px', md: '14px' }}
-              borderRadius={10}
-              marginTop='3'
-            >
-              Send Message
-            </Button>
+              <Text
+                fontSize={{ base: "12px", md: "16px" }}
+                fontFamily="cabin variable"
+                fontWeight={{ base: "300px", md: "600px" }}
+                lineHeight="49px"
+              >
+                Full Name
+              </Text>
+              <Input
+                pos={"static"}
+                placeholder="Full Name"
+                type="email"
+                fontSize={{ base: "10px", md: "14px" }}
+                onChange={(e) => setFullname(e.target.value)}
+              />
+              <Text
+                fontFamily="cabin variable"
+                fontSize={{ base: "12px", md: "16px" }}
+                fontWeight={{ base: "300px", md: "600px" }}
+                lineHeight="49px"
+              >
+                Phone Number
+              </Text>
+              <Input
+                pos={"static"}
+                placeholder="Phone Number"
+                type="email"
+                fontSize={{ base: "10px", md: "14px" }}
+                onChange={(e) => setPhonenumber(e.target.value)}
+              />
+              <Text
+                fontFamily="cabin variable"
+                fontSize={{ base: "12px", md: "16px" }}
+                fontWeight={{ base: "300px", md: "600px" }}
+                lineHeight="49px"
+              >
+                Email Address
+              </Text>
+              <Input
+                pos={"static"}
+                placeholder="Email Address"
+                type="email"
+                fontSize={{ base: "10px", md: "14px" }}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Text
+                fontFamily="cabin variable"
+                fontSize={{ base: "12px", md: "16px" }}
+                fontWeight={{ base: "300px", md: "600px" }}
+                lineHeight="49px"
+              >
+                Subject
+              </Text>
+              <Input
+                pos={"static"}
+                placeholder="Subject"
+                type="email"
+                fontSize={{ base: "10px", md: "14px" }}
+                onChange={(e) => setSubject(e.target.value)}
+              />
+              <Text
+                fontFamily="cabin variable"
+                fontSize={{ base: "12px", md: "16px" }}
+                fontWeight={{ base: "300px", md: "600px" }}
+                lineHeight="49px"
+              >
+                Message
+              </Text>
+              <Textarea
+                pos={"static"}
+                placeholder="Enter a message"
+                fontSize={{ base: "10px", md: "14px" }}
+                h={{ base: "50px", md: "200px" }}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <Button
+                as="a"
+                href={
+                  "mailto:info@systemname.com?subject=" +
+                  subject +
+                  "&body=" +
+                  message +
+                  fullname +
+                  email +
+                  phonenumber
+                }
+                variant="solid"
+                colorScheme="yellow"
+                fontFamily="cabin variable"
+                fontWeight={{ base: "650", md: "800" }}
+                fontSize={{ base: "10px", md: "14px" }}
+                borderRadius={10}
+                marginTop="3"
+              >
+                Send Message
+              </Button>
+            </Flex>
           </Flex>
-        </Flex>
+        </Stack>
       </Container>
     </Flex>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;

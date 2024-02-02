@@ -33,7 +33,6 @@ export default function ModuleMenu () {
             aliquip ex ea commodo consequat.
           </AccordionPanel>
         </AccordionItem>
-
         <AccordionItem>
           <h2>
             <AccordionButton>
@@ -57,23 +56,22 @@ export default function ModuleMenu () {
         </Heading>
         <Card w='25vw' h='max-content' pb='1.5rem'>
           <CardBody>
-            <ButtonGroup flexDir={'column'} gap={'0.5rem'} width={'100%'}>
-              <Button>List of Users</Button>
-              <Button>Admin Directory</Button>
-              <Button>Homeowner Directory</Button>
+            <ButtonGroup flexDir={"column"} gap={"0.5rem"} width={"100%"}>
+              <Button fontFamily="cabin variable">List of Users</Button>
+              <Button fontFamily="cabin variable">Admin Directory</Button>
+              <Button fontFamily="cabin variable">Homeowner Directory</Button>
             </ButtonGroup>
           </CardBody>
         </Card>
       </Flex>
-      <Flex flexDir={'column'}>
-        <Heading size='md' mb='1rem'>
+      <Flex flexDir={"column"}>
+        <Heading size="md" mb="1rem" fontFamily="montserrat variable">
           Property Management
         </Heading>
-        <Card w='25vw' h='max-content' pb='1.5rem'>
           <CardBody>
-            <ButtonGroup flexDir={'column'} gap={'0.5rem'} width={'100%'}>
-              <Button>List of House Lots</Button>
-              <Button>House Lot Documents</Button>
+            <ButtonGroup flexDir={"column"} gap={"0.5rem"} width={"100%"}>
+              <Button fontFamily="cabin variable">List of House Lots</Button>
+              <Button fontFamily="cabin variable">House Lot Documents</Button>
             </ButtonGroup>
           </CardBody>
         </Card>
@@ -92,5 +90,5 @@ export default function ModuleMenu () {
         </Card>
       </Flex>
     </Flex>
-  )
+  );
 }
