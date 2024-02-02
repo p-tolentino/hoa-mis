@@ -67,7 +67,7 @@ function Navbar () {
           _hover={{ color: '#E9C850' }}
           padding='10px'
           px='20px'
-          onClick={() => handleLinkClick('policies')}
+          onClick={() => handleLinkClick('Terms and Conditions')}
           color={
             clickedLinkId === 'policies' ? colors.selected : colors.unselected
           }

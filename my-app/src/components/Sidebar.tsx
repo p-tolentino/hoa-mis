@@ -36,7 +36,7 @@ export default function Sidebar () {
       color={'white'}
     >
       <Flex
-        p='5%'
+        p={sidebarSize === 'small' ? '17%' : '5%'}
         flexDir='column'
         w='100%'
         alignItems={sidebarSize === 'small' ? 'center' : 'flex-start'}
@@ -52,6 +52,7 @@ export default function Sidebar () {
             else changeSidebarSize('small')
           }}
           aria-label={''}
+          alignSelf={'flex-start'}
         />
         <SidebarItem
           sidebarSize={sidebarSize}

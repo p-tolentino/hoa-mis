@@ -56,7 +56,7 @@ function About () {
             alt='Membership Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Membership Module</Heading>
+          <Heading size='sm'>Membership </Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -79,7 +79,7 @@ function About () {
             alt='Finance Management Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Finance Management Module</Heading>
+          <Heading size='sm'>Finance Management</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -102,7 +102,7 @@ function About () {
             alt='Community Engagement Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Community Engagement Module</Heading>
+          <Heading size='sm'>Community Engagement</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -125,7 +125,7 @@ function About () {
             alt='Dispute Resolution'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Dispute Resolution Module</Heading>
+          <Heading size='sm'>Dispute Resolution</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -148,7 +148,7 @@ function About () {
             alt='Violation Monitoring Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Violation Monitoring Module</Heading>
+          <Heading size='sm'>Violation Monitoring</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -171,7 +171,7 @@ function About () {
             alt='Facility Reservation Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Facility Reservation Module</Heading>
+          <Heading size='sm'>Facility Reservation</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -194,7 +194,7 @@ function About () {
             alt='Maintenance Handling Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Maintenance Handling Module</Heading>
+          <Heading size='sm'>Maintenance Handling</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
@@ -217,7 +217,7 @@ function About () {
             alt='Election Management Module'
             boxSize={'5rem'}
           ></Image>
-          <Heading size='sm'>Election Management Module</Heading>
+          <Heading size='sm'>Election Management</Heading>
           <Text fontSize={'14px'}>
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
             ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
