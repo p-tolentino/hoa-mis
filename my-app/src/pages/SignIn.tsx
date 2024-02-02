@@ -1,4 +1,4 @@
-import NAVBAR from "../components/Navbar";
+import NAVBAR from '../components/Navbar'
 import {
   Flex,
   Box,
@@ -10,106 +10,102 @@ import {
   Heading,
   Text,
   Link,
-  HStack,
-} from "@chakra-ui/react";
-import subdivision from "../images/subdivision.jpg";
-import GoogleIcon from "../images/google-icon.png";
+  HStack
+} from '@chakra-ui/react'
+import subdivision from '../images/subdivision.jpg'
+import GoogleIcon from '../images/google-icon.png'
 
-function SignIn() {
+function SignIn () {
   return (
     <Box>
       <NAVBAR />
-      <Flex w="100vw" h="100vh" justify="space-between">
-        <Box w="50vw" h="100vh" verticalAlign="left">
-          <Flex h="100vh" justify="center" alignItems="center">
+      <Flex w='100vw' h='100vh' justify='space-between'>
+        <Box w='50vw' h='100vh' verticalAlign='left'>
+          <Flex h='100vh' justify='center' alignItems='center'>
             <Stack
-              w="full"
-              maxW="md"
-              rounded="xl"
-              boxShadow="lg"
-              px="6"
-              py="10"
-              bg="white"
+              w='full'
+              maxW='md'
+              rounded='xl'
+              boxShadow='lg'
+              px='6'
+              py='10'
+              bg='white'
             >
-              <Box mb="10px">
-                <Heading
-                  size="lg"
-                  textAlign="left"
-                  fontFamily="montserrat variable"
-                >
+              <Box mb='10px'>
+                <Heading size='lg' textAlign='left' fontFamily='font.heading'>
                   Sign in
                 </Heading>
                 <Text
-                  size="sm"
-                  fontFamily="cabin variable"
-                  textAlign="left"
-                  color="gray"
-                  mb="5"
+                  size='sm'
+                  fontFamily='font.body'
+                  textAlign='left'
+                  color='gray'
+                  mb='5'
                 >
                   Welcome Back! Sign in using Google
                 </Text>
               </Box>
               <Button
-                variant="outline"
-                _hover={{ color: "#E9C850" }}
+                variant='outline'
+                _hover={{ color: '#E9C850' }}
                 leftIcon={
                   <img
                     src={GoogleIcon}
-                    alt="Google Icon"
-                    style={{ width: "30px" }}
+                    alt='Google Icon'
+                    style={{ width: '30px' }}
                   />
                 }
-                fontFamily="cabin variable"
+                fontFamily='font.body'
               >
                 Google
               </Button>
               <Text
-                size="sm"
-                fontFamily="cabin variable"
-                textAlign="center"
-                color="gray"
-                mt="5"
-                mb="5"
+                size='sm'
+                fontFamily='font.body'
+                textAlign='center'
+                color='gray'
+                mt='5'
+                mb='5'
               >
                 or Sign in using Email Address
               </Text>
-              <FormControl id="username">
-                <FormLabel fontFamily="cabin variable">Email Address</FormLabel>
+              <FormControl id='username'>
+                <FormLabel fontFamily='font.body'>Email Address</FormLabel>
                 <Input
-                  fontFamily="cabin variable"
-                  placeholder="email.address@gmail.com"
-                  type="string"
+                  fontFamily='font.body'
+                  placeholder='email.address@gmail.com'
+                  type='string'
                 />
               </FormControl>
-              <FormControl id="password">
-                <FormLabel fontFamily="cabin variable">Password</FormLabel>
-                <Input placeholder="******" type="password" />
+              <FormControl id='password'>
+                <FormLabel fontFamily='font.body'>Password</FormLabel>
+                <Input placeholder='******' type='password' />
               </FormControl>
-              <HStack alignSelf="center">
+              <HStack alignSelf='center'>
                 <Text
-                  fontSize="14px"
-                  fontFamily="cabin variable"
-                  textAlign="center"
-                  color="gray"
+                  fontSize='14px'
+                  fontFamily='font.body'
+                  textAlign='center'
+                  color='gray'
                 >
                   Don't have an account yet?
                 </Text>
                 <Link
-                  href="sign-up"
-                  fontFamily="cabin variable"
-                  fontSize="14px"
-                  color="blue"
+                  href='sign-up'
+                  fontFamily='font.body'
+                  fontSize='14px'
+                  color='blue'
                 >
                   Sign up
                 </Link>
               </HStack>
-              <Stack spacing={2} mt="20px">
+              <Stack spacing={2} mt='20px'>
                 <Button
-                  type="submit"
-                  colorScheme="yellow"
-                  borderRadius="10"
-                  fontFamily="cabin variable"
-                  fontWeight="800"
+                  type='submit'
+                  colorScheme='yellow'
+                  borderRadius='10'
+                  fontFamily='font.body'
+                  fontWeight='800'
                 >
                   Sign in
                 </Button>
@@ -117,11 +113,11 @@ function SignIn() {
             </Stack>
           </Flex>
         </Box>
-        <Box w="50vw" height="100vh" right="0">
-          <img src={subdivision} alt="Subdivision" style={{ height: "100%" }} />
+        <Box w='50vw' height='100vh' right='0'>
+          <img src={subdivision} alt='Subdivision' style={{ height: '100%' }} />
         </Box>
       </Flex>
     </Box>
-  );
+  )
 }
-export default SignIn;
+export default SignIn

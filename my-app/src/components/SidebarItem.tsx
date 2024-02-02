@@ -17,6 +17,7 @@ export default function SidebarItem ({
       w='100%'
       alignItems={sidebarSize === 'small' ? 'center' : 'left'}
       fontSize={'sm'}
+      fontFamily={'font.body'}
     >
       <Menu placement='right'>
         <Link
