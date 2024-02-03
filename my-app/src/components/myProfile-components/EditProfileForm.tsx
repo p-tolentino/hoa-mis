@@ -6,7 +6,7 @@ import {
   Textarea
 } from '@chakra-ui/react'
 
-export default function EditProfileButton () {
+export default function EditProfileForm () {
   return (
     <>
       <FormControl fontFamily={'font.body'}>
