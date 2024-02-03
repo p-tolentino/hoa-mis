@@ -7,16 +7,21 @@ import {
   Center,
   SimpleGrid,
   Box,
-  Flex
+  Flex,
+  Image
 } from '@chakra-ui/react'
-// import Image from "next/image";
-// import landscapeLowerOpacity from '../public/landscapeLowerOpacity.png'
-// import tempModuleIcon from '../public//tempModuleIcon.png'
+import Navbar from '@/components/navbar-components/Navbar'
+import tempModuleIcon from '../public/tempModuleIcon.png'
 
 function Homepage () {
   return (
     <Box>
-      <Center h='30vh' bgSize={'cover'}>
+      <Navbar />
+      <Center
+        h='30vh'
+        bgSize={'cover'}
+        bgImage={`url("/landscapeLowerOpacity.png")`}
+      >
         <Flex bgColor={'rgba(255, 255, 255, 0.6)'}>
           <Stack
             direction={'column'}
@@ -56,6 +61,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Membership
           </Heading>
@@ -76,6 +86,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Finance Management
           </Heading>
@@ -96,6 +111,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Community Engagement
           </Heading>
@@ -116,6 +136,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Dispute Resolution
           </Heading>
@@ -136,6 +161,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Violation Monitoring
           </Heading>
@@ -156,6 +186,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Facility Reservation
           </Heading>
@@ -176,6 +211,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Maintenance Handling
           </Heading>
@@ -196,6 +236,11 @@ function Homepage () {
           alignItems={'center'}
           textAlign={'center'}
         >
+          <Image
+            src='/tempModuleIcon.png'
+            alt='Membership Module'
+            boxSize={'5rem'}
+          ></Image>
           <Heading size='sm' fontFamily='font.heading'>
             Election Management
           </Heading>

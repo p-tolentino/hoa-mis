@@ -1,6 +1,7 @@
 'use client'
 
-// import NAVBAR from '../components/Navbar'
+import Navbar from '@/components/navbar-components/Navbar'
+
 import {
   Flex,
   Box,
@@ -17,7 +18,7 @@ import {
 export default function SignUp () {
   return (
     <Box>
-      {/* <NAVBAR /> */}
+      <Navbar />
       <Flex
         w='100%'
         h='100%'
