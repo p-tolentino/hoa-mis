@@ -51,7 +51,7 @@ function Navbar () {
       <Spacer />
       <HStack gap='10'>
         <Link
-          href='/'
+          href='/#about'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           fontFamily='font.body'

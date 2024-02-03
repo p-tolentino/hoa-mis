@@ -13,10 +13,9 @@ import {
   Heading,
   Text,
   Link,
-  HStack
+  HStack,
+  Image
 } from '@chakra-ui/react'
-// import subdivision from '../images/subdivision.jpg'
-// import GoogleIcon from '../images/google-icon.png'
 
 export default function SignIn () {
   return (
@@ -51,13 +50,9 @@ export default function SignIn () {
               <Button
                 variant='outline'
                 _hover={{ color: '#E9C850' }}
-                // leftIcon={
-                //   <img
-                //     src={GoogleIcon}
-                //     alt='Google Icon'
-                //     style={{ width: '30px' }}
-                //   />
-                // }
+                leftIcon={
+                  <Image src='/google-icon.png' alt='Google Icon' w={'30px'} />
+                }
                 fontFamily='font.body'
               >
                 Google
@@ -94,7 +89,7 @@ export default function SignIn () {
                   Don't have an account yet?
                 </Text>
                 <Link
-                  href='sign-up'
+                  href='/sign-up'
                   fontFamily='font.body'
                   fontSize='14px'
                   color='blue'
@@ -117,7 +112,7 @@ export default function SignIn () {
           </Flex>
         </Box>
         <Box w='50vw' height='100vh' right='0'>
-          {/* <img src={subdivision} alt='Subdivision' style={{ height: '100%' }} /> */}
+          <Image src='/subdivision.jpg' alt='Subdivision' h={'100%'} />
         </Box>
       </Flex>
     </Box>
