@@ -1,33 +1,32 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-import { auth } from "@/auth";
-import { SessionProvider } from "next-auth/react";
+import { auth } from '@/auth'
+import { SessionProvider } from 'next-auth/react'
+import { Providers } from './providers'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "HOA MIS",
-  description: "HOA MIS",
-};
+  title: 'HOA MIS',
+  description: 'HOA MIS'
+}
 
-export default async function RootLayout({
-  children,
+export default async function RootLayout ({
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  const session = await auth();
+  const session = await auth()
 
   return (
     <SessionProvider session={session}>
-      <html lang="en">
+      <html lang='en'>
         <body className={inter.className}>
-          <Toaster />
-          {children}
+          <Providers>{children}</Providers>
         </body>
       </html>
     </SessionProvider>
-  );
+  )
 }
