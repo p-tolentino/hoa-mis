@@ -51,7 +51,7 @@ export default function Sidebar () {
       h='100vh'
       minW={sidebarSize === 'small' ? '75px' : '280px'}
       flexDir='column'
-      justifyContent='space-around'
+      justifyContent='space-between'
       bgColor={'brand.500'}
       color={'white'}
       zIndex={3}
