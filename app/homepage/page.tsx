@@ -1,15 +1,14 @@
 'use client'
 
 import { Text, Heading, Stack, Center, Box, Flex } from '@chakra-ui/react'
-import Navbar from '@/components/navbar-components/Navbar'
 import About from './about/page'
 import RegisterHOA from './register-hoa/page'
 import ContactUs from './contact-us/page'
+import HomepageLayout from './layout'
 
 function Homepage () {
   return (
-    <Box>
-      <Navbar />
+    <HomepageLayout>
       <Center
         h='30vh'
         bgSize={'cover'}
@@ -40,7 +39,7 @@ function Homepage () {
       <About />
       <RegisterHOA />
       <ContactUs />
-    </Box>
+    </HomepageLayout>
   )
 }
 export default Homepage

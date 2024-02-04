@@ -13,11 +13,9 @@ export const publicRoutes = ['/', '/new-verification']
 export const authRoutes = [
   '/sign-in',
   '/sign-up',
-  '/membership-module'
-  // '/membership-module/my-profile'
-  // '/error',
-  // '/reset',
-  // '/new-password'
+  '/system-admin',
+  '/system-admin/my-profile',
+  '/system-admin/membership'
 ]
 
 /**

@@ -13,7 +13,7 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react'
-import EditProfileForm from '../myProfile-components/EditProfileForm'
+import EditProfileForm from './EditProfileForm'
 
 export default function EditProfileButton () {
   // Form Title and instructions

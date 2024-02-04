@@ -22,7 +22,6 @@ import {
 import { BsNewspaper } from 'react-icons/bs'
 import { PiBinocularsBold, PiBroomFill } from 'react-icons/pi'
 import SidebarItem from './SidebarItem'
-import { NavLink } from 'react-router-dom'
 
 export default function Sidebar () {
   const [sidebarSize, changeSidebarSize] = useState('large')
@@ -145,9 +144,9 @@ export default function Sidebar () {
           fontSize={'sm'}
           display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
-          <Text as={Link} fontFamily='font.body'>
+          <Link href='/system-admin/my-profile' fontFamily={'font.body'}>
             My Profile
-          </Text>
+          </Link>
         </Flex>
         <Flex
           mt={2}
@@ -163,9 +162,9 @@ export default function Sidebar () {
           fontSize={'sm'}
           display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
-          <Text as={NavLink} to={'/'} fontFamily='font.body'>
+          <Link href='/' fontFamily={'font.body'}>
             Sign Out
-          </Text>
+          </Link>
         </Flex>
       </Flex>
     </Flex>

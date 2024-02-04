@@ -13,6 +13,8 @@ export default function SidebarItem ({
   active: boolean
   sidebarSize: string
 }) {
+  const navigatToModule = title.toLowerCase().replace(/\s+/g, '-')
+
   return (
     <Box
       mt={'1.4rem'}
@@ -23,6 +25,7 @@ export default function SidebarItem ({
     >
       <Menu placement='right'>
         <Link
+          href={navigatToModule}
           backgroundColor={active ? 'brand.300' : 'none'}
           p={3}
           borderRadius={8}

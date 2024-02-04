@@ -102,7 +102,7 @@ function Navbar () {
           Contact Us
         </Link>
         <Link
-          href='/membership-module'
+          href='/system-admin/membership'
           _hover={{ color: '#E9C850' }}
           padding='10px'
           fontFamily='font.body'
@@ -114,7 +114,7 @@ function Navbar () {
               : colors.unselected
           }
         >
-          Test Membership Module
+          Test System Admin Login
         </Link>
       </HStack>
       <Spacer />
