@@ -6,27 +6,27 @@ import { auth } from "@/auth";
 import { SessionProvider } from "next-auth/react";
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "HOA MIS",
-  description: "HOA MIS",
-};
+  title: 'HOA MIS',
+  description: 'HOA MIS'
+}
 
-export default async function RootLayout({
-  children,
+export default async function RootLayout ({
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  const session = await auth();
+  const session = await auth()
 
   return (
     <SessionProvider session={session}>
-      <Providers>
-        <html lang="en">
-          <body className={inter.className}>{children}</body>
-        </html>
-      </Providers>
+      <html lang='en'>
+        <body className={inter.className}>
+          <Providers>{children}</Providers>
+        </body>
+      </html>
     </SessionProvider>
-  );
+  )
 }

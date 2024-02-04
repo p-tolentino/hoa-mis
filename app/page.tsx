@@ -1,8 +1,11 @@
-export default function Home() {
+'use client'
+
+import Homepage from './homepage/page'
+
+export default function App () {
   return (
-    <main className="flex h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
-      {/* Feel free to edit yung background color or etc. */}
-      Landing Page
-    </main>
-  );
+    <>
+      <Homepage />
+    </>
+  )
 }
