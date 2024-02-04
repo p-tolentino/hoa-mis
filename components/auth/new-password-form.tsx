@@ -7,7 +7,7 @@ import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { NewPasswordSchema } from "@/schemas";
+import { NewPasswordSchema } from "@/backend/schemas";
 
 import {
   Form,
@@ -23,7 +23,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
-import { newPassword } from "@/actions/new-password";
+import { newPassword } from "@/backend/actions/new-password";
 
 export const NewPasswordForm = () => {
   const [error, setError] = useState<string | undefined>("");
