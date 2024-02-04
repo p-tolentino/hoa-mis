@@ -16,8 +16,7 @@ function App() {
           <Route path="/*" element={<HomepageLayout />} />
           <Route path="sign-in" element={<SIGN_IN />} />
           <Route path="sign-up" element={<SIGN_UP />} />
-          <Route path="membership-menu" element={<SystemLayout />} />
-          <Route path="user-management" element={<USERMANAGEMENT />} />
+          <Route path="user-management" element={<SystemLayout />} />
         </Routes>
       </BrowserRouter>
     </Box>
