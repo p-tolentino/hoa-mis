@@ -6,7 +6,7 @@ import { CardWrapper } from "./card-wrapper";
 import { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-import { newVerification } from "@/actions/new-verification";
+import { newVerification } from "@/backend/actions/new-verification";
 import { FormError } from "../form-error";
 import { FormSuccess } from "../form-success";
 

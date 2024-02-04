@@ -1,4 +1,4 @@
-import { db } from "@/lib/db";
+import { db } from "@/backend/lib/db";
 
 export const getResetPasswordTokenByToken = async (token: string) => {
   try {

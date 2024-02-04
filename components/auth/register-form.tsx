@@ -6,7 +6,7 @@ import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { RegisterSchema } from "@/schemas";
+import { RegisterSchema } from "@/backend/schemas";
 
 import {
   Form,
@@ -22,7 +22,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
-import { register } from "@/actions/register";
+import { register } from "@/backend/actions/register";
 
 export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("");

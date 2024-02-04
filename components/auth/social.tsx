@@ -3,7 +3,7 @@
 import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
-import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { DEFAULT_LOGIN_REDIRECT } from "@/backend/routes";
 import { useSearchParams } from "next/navigation";
 
 export const Social = () => {
