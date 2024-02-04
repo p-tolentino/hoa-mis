@@ -1,8 +1,8 @@
-import { EditIcon } from '@chakra-ui/icons'
+'use client'
+
 import {
   Avatar,
   Box,
-  Button,
   Flex,
   Heading,
   ListItem,
@@ -15,8 +15,9 @@ import {
   Tr,
   UnorderedList
 } from '@chakra-ui/react'
+import EditProfileButton from '../../components/myProfile-components/EditProfileButton'
 
-export default function EditMyProfile () {
+export default function MyProfile () {
   return (
     <Box zIndex={1} p='5'>
       <Flex
@@ -42,14 +43,8 @@ export default function EditMyProfile () {
           </Box>
         </Flex>
         {/* Edit Profile Button */}
-        <Button colorScheme='yellow'>
-          <Heading size='md' fontFamily={'font.body'}>
-            Edit Profile
-          </Heading>
-          <EditIcon ml={'0.5rem'} />
-        </Button>
+        <EditProfileButton />
       </Flex>
-
       {/* Biography */}
       <Box mt='2rem'>
         <Heading size='md' fontFamily={'font.heading'} mb={'1rem'}>
@@ -65,7 +60,6 @@ export default function EditMyProfile () {
           officiis delectus dicta.
         </Text>
       </Box>
-
       <SimpleGrid
         columns={2}
         mt='3rem'
@@ -77,38 +71,36 @@ export default function EditMyProfile () {
           <Heading size='md' fontFamily={'font.heading'} mb={'1rem'}>
             Personal Information
           </Heading>
-          <Text>
-            <TableContainer>
-              <Table w='35vw'>
-                <Tbody>
-                  <Tr>
-                    <Td px={0} py={2}>
-                      House No. & Street
-                    </Td>
-                    <Td px={0} py={2}>
-                      00 Apple Street
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td px={0} py={2}>
-                      Contact Number
-                    </Td>
-                    <Td px={0} py={2}>
-                      0900 000 0000
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td px={0} py={2}>
-                      Email Address
-                    </Td>
-                    <Td px={0} py={2}>
-                      john.doe@gmail.com
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </Text>
+          <TableContainer>
+            <Table w='35vw'>
+              <Tbody>
+                <Tr>
+                  <Td px={0} py={2}>
+                    House No. & Street
+                  </Td>
+                  <Td px={0} py={2}>
+                    00 Apple Street
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td px={0} py={2}>
+                    Contact Number
+                  </Td>
+                  <Td px={0} py={2}>
+                    0900 000 0000
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td px={0} py={2}>
+                    Email Address
+                  </Td>
+                  <Td px={0} py={2}>
+                    john.doe@gmail.com
+                  </Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </TableContainer>
         </Box>
         {/* Interests & Hobbies */}
         <Box mt={{ sm: '2rem', md: '0' }}>
