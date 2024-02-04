@@ -28,6 +28,7 @@ const ViewMemberDetailsButton = () => {
   return (
     <>
       <Button
+        fontFamily="font.body"
         onClick={() => onOpen()}
         key={action}
         colorScheme="green"
@@ -37,12 +38,14 @@ const ViewMemberDetailsButton = () => {
         {action}
       </Button>
 
-      <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="md">
+      <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="lg">
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader mt="10px">
-            <Heading size="md">{action}</Heading>
+            <Heading size="md" fontFamily="font.heading">
+              {action}
+            </Heading>
           </DrawerHeader>
           <DrawerBody>
             <Stack spacing={5} paddingRight="20px">
@@ -71,7 +74,7 @@ const ViewMemberDetailsButton = () => {
                   <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
                     Biography
                   </Heading>
-                  <Text fontFamily="font.body">
+                  <Text fontFamily="font.body" textAlign="justify">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Sequi, quia vitae adipisci quasi vel consequuntur, officiis
                     magnam iusto repellat eaque deleniti quaerat atque autem
@@ -118,7 +121,12 @@ const ViewMemberDetailsButton = () => {
                   <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
                     Interests & Hobbies
                   </Heading>
-                  <UnorderedList spacing={2} fontFamily="font.body" px="15px">
+                  <UnorderedList
+                    spacing={2}
+                    fontFamily="font.body"
+                    px="15px"
+                    textAlign="justify"
+                  >
                     <ListItem>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </ListItem>

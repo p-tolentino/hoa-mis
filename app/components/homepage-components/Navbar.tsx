@@ -19,7 +19,6 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import SignInButton from "./SignInButton";
-import { NavLink } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 const colors = {
@@ -146,20 +145,19 @@ function Navbar() {
             Contact Us
           </Link>
           <Link
-            as={NavLink}
-            to={"user-management"}
+            href="/system-admin/membership"
             _hover={{ color: "#E9C850" }}
             padding="10px"
             fontFamily="font.body"
             px="20px"
-            onClick={() => handleLinkClick("test membership module")}
+            onClick={() => handleLinkClick("test system admin login")}
             color={
-              clickedLinkId === "test membership module"
+              clickedLinkId === "test system admin login"
                 ? colors.selected
                 : colors.unselected
             }
           >
-            Test Membership Module
+            Test System Admin Login
           </Link>
         </HStack>
       </Show>

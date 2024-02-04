@@ -1,7 +1,5 @@
 "use client";
 
-import Navbar from "../components/homepage-components/Navbar";
-
 import {
   Flex,
   Box,
