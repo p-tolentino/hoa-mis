@@ -25,19 +25,15 @@ import SidebarItem from './SidebarItem'
 
 export default function Sidebar () {
   const [sidebarSize, changeSidebarSize] = useState('large')
-
   useEffect(() => {
     const handleResize = () => {
       const isSmallScreen = window.innerWidth <= 768 // You can adjust the breakpoint (768) as needed
       changeSidebarSize(isSmallScreen ? 'small' : 'large')
     }
-
     // Initial check on mount
     handleResize()
-
     // Event listener for window resize
     window.addEventListener('resize', handleResize)
-
     // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize)
@@ -172,7 +168,7 @@ export default function Sidebar () {
           fontSize={'sm'}
           display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
-          <Text as={Link} fontFamily='font.body'>
+          <Text as={Link} href='/system-admin/settings' fontFamily='font.body'>
             Settings
           </Text>
         </Flex>

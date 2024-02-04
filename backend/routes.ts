@@ -15,9 +15,18 @@ export const authRoutes = [
   '/sign-up',
   '/system-admin',
   '/system-admin/my-profile',
+  '/system-admin/dashboard',
   '/system-admin/membership',
   '/system-admin/membership/user-management',
-  '/system-admin/membership/property-management'
+  '/system-admin/membership/property-management',
+  '/system-admin/finance-management',
+  '/system-admin/community-engagement',
+  '/system-admin/dispute-resolution',
+  '/system-admin/violation-monitoring',
+  '/system-admin/facility-reservation',
+  '/system-admin/maintenance-handling',
+  '/system-admin/election-management',
+  '/system-admin/settings'
 ]
 
 /**
