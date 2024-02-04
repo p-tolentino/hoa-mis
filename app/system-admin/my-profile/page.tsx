@@ -21,6 +21,7 @@ export default function MyProfile() {
   return (
     <Box zIndex={1} p="5">
       <Flex
+        id="my-profile"
         justifyContent={"space-between"}
         flexDir={{ sm: "column", md: "row" }}
       >
@@ -73,38 +74,36 @@ export default function MyProfile() {
           <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
             Personal Information
           </Heading>
-          <Text>
-            <TableContainer>
-              <Table w="35vw">
-                <Tbody>
-                  <Tr>
-                    <Td px={0} py={2} style={{ fontWeight: "bold" }}>
-                      House No. & Street
-                    </Td>
-                    <Td px={0} py={2}>
-                      00 Apple Street
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td px={0} py={2} style={{ fontWeight: "bold" }}>
-                      Contact Number
-                    </Td>
-                    <Td px={0} py={2}>
-                      0900 000 0000
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td px={0} py={2} style={{ fontWeight: "bold" }}>
-                      Email Address
-                    </Td>
-                    <Td px={0} py={2}>
-                      john.doe@gmail.com
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </Text>
+          <TableContainer>
+            <Table w="35vw">
+              <Tbody>
+                <Tr>
+                  <Td px={0} py={2} style={{ fontWeight: "bold" }}>
+                    House No. & Street
+                  </Td>
+                  <Td px={0} py={2}>
+                    00 Apple Street
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td px={0} py={2} style={{ fontWeight: "bold" }}>
+                    Contact Number
+                  </Td>
+                  <Td px={0} py={2}>
+                    0900 000 0000
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td px={0} py={2} style={{ fontWeight: "bold" }}>
+                    Email Address
+                  </Td>
+                  <Td px={0} py={2}>
+                    john.doe@gmail.com
+                  </Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </TableContainer>
         </Box>
         {/* Interests & Hobbies */}
         <Box mt={{ sm: "2rem", md: "0" }}>

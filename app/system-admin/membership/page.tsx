@@ -67,7 +67,9 @@ export default function MembershipModuleMenu() {
               width={"100%"}
               fontFamily="font.body"
             >
-              <Button>Membership Card</Button>
+              <Button as="a" href="/system-admin/membership/membership-card">
+                Membership Card
+              </Button>
             </ButtonGroup>
           </CardBody>
         </Card>
