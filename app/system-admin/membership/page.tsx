@@ -27,8 +27,12 @@ export default function MembershipModuleMenu() {
               <Button as="a" href="/system-admin/membership/user-management">
                 User Management
               </Button>
-              <Button>Admin Directory</Button>
-              <Button>Homeowner Directory</Button>
+              <Button
+                as="a"
+                href="/system-admin/membership/association-contact-directory"
+              >
+                Association Contact Directory
+              </Button>
             </ButtonGroup>
           </CardBody>
         </Card>
@@ -63,8 +67,7 @@ export default function MembershipModuleMenu() {
               width={"100%"}
               fontFamily="font.body"
             >
-              <Button>Membership Card (Tenant)</Button>
-              <Button>Membership Card (Resident)</Button>
+              <Button>Membership Card</Button>
             </ButtonGroup>
           </CardBody>
         </Card>

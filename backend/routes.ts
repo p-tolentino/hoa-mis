@@ -17,6 +17,7 @@ export const authRoutes = [
   "/system-admin/my-profile",
   "/system-admin/membership",
   "/system-admin/membership/user-management",
+  "/system-admin/membership/association-contact-directory",
 ];
 
 /**
