@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Flex,
   Text,
@@ -25,14 +25,33 @@ import SidebarItem from './SidebarItem'
 
 export default function Sidebar () {
   const [sidebarSize, changeSidebarSize] = useState('large')
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isSmallScreen = window.innerWidth <= 768 // You can adjust the breakpoint (768) as needed
+      changeSidebarSize(isSmallScreen ? 'small' : 'large')
+    }
+
+    // Initial check on mount
+    handleResize()
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
     <Flex
       pos='sticky'
       top={0}
       h='100vh'
-      w={sidebarSize === 'small' ? '75px' : '280px'}
+      minW={sidebarSize === 'small' ? '75px' : '280px'}
       flexDir='column'
-      justifyContent='space-between'
+      justifyContent='space-around'
       bgColor={'brand.500'}
       color={'white'}
       zIndex={3}

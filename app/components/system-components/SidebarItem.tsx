@@ -1,63 +1,55 @@
-"use client";
+'use client'
 
-import {
-  Flex,
-  Text,
-  Icon,
-  Link,
-  Menu,
-  MenuButton,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Text, Icon, Link, Menu, MenuButton, Box } from '@chakra-ui/react'
 
-export default function SidebarItem({
+export default function SidebarItem ({
   icon,
   title,
   active,
-  sidebarSize,
+  sidebarSize
 }: {
-  icon: any;
-  title: string;
-  active: boolean;
-  sidebarSize: string;
+  icon: any
+  title: string
+  active: boolean
+  sidebarSize: string
 }) {
   const navigateToModule =
-    "/system-admin/" + title.toLowerCase().replace(/\s+/g, "-");
+    '/system-admin/' + title.toLowerCase().replace(/\s+/g, '-')
 
   return (
     <Box
-      mt={"1.4rem"}
-      w="100%"
-      alignItems={sidebarSize === "small" ? "center" : "left"}
-      fontSize={"sm"}
-      fontFamily={"font.body"}
+      mt={'1.4rem'}
+      w='100%'
+      alignItems={sidebarSize === 'small' ? 'center' : 'left'}
+      fontSize={'sm'}
+      fontFamily={'font.body'}
     >
-      <Menu placement="right">
+      <Menu placement='right'>
         <Link
           href={navigateToModule}
-          backgroundColor={active ? "brand.300" : "none"}
+          backgroundColor={active ? 'brand.300' : 'none'}
           p={3}
           borderRadius={8}
           _hover={{
-            textDecor: "none",
-            backgroundColor: active || "#688f6e",
-            color: "white",
+            textDecor: 'none',
+            backgroundColor: active || '#688f6e',
+            color: 'white'
           }}
           w={sidebarSize}
         >
-          <MenuButton w="100%">
+          <MenuButton w='100%'>
             <Flex>
               <Icon
                 as={icon}
-                fontSize="xl"
-                color={active ? "black" : "white"}
+                fontSize='xl'
+                color={active ? 'black' : 'white'}
               />
               <Text
-                textAlign={"left"}
+                textAlign={'left'}
                 ml={5}
-                display={sidebarSize === "small" ? "none" : "flex"}
-                color={active ? "black" : "white"}
-                fontWeight={active ? "bold" : "normal"}
+                display={sidebarSize === 'small' ? 'none' : 'flex'}
+                color={active ? 'black' : 'white'}
+                fontWeight={active ? 'bold' : 'normal'}
               >
                 {title}
               </Text>
@@ -66,5 +58,5 @@ export default function SidebarItem({
         </Link>
       </Menu>
     </Box>
-  );
+  )
 }

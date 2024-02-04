@@ -1,18 +1,18 @@
-"use client";
-import { Table, Thead, Tbody, Box, Tr, Th, Td, Button } from "@chakra-ui/react";
-import ViewMemberDetailsButton from "./ViewMemberDetailsButton";
+'use client'
+import { Table, Thead, Tbody, Box, Tr, Th, Td, Button } from '@chakra-ui/react'
+import ViewMemberDetailsButton from './ViewMemberDetailsButton'
 
 const UserManagementTable = () => {
   return (
     <Box>
       <Table
-        mt="30px"
-        size="md"
-        variant="striped"
-        colorScheme="gray"
+        mt='30px'
+        size='md'
+        variant='striped'
+        colorScheme='gray'
         // tableLayout="fixed"
       >
-        <Thead backgroundColor="brand.400">
+        <Thead backgroundColor='brand.400'>
           {/* <Tr width="full">
                 {props.headers.map((header, index) => (
                   <Th
@@ -23,7 +23,7 @@ const UserManagementTable = () => {
                   </Th>
                 ))}
               </Tr> */}
-          <Tr width="full">
+          <Tr width='full'>
             <Th>Status</Th>
             <Th>Member Type</Th>
             <Th>Member Name</Th>
@@ -73,7 +73,7 @@ const UserManagementTable = () => {
         </Tbody>
       </Table>
     </Box>
-  );
-};
+  )
+}
 
-export default UserManagementTable;
+export default UserManagementTable
