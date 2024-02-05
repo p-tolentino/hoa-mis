@@ -31,7 +31,7 @@ export default function MembershipModuleMenu() {
               minW={"100%"}
               fontFamily="font.body"
             >
-              <Button as="a" href="/system-admin/membership/user-management">
+              <Button as="a" href="/admin/membership/user-management">
                 User Management
               </Button>
               <Button>Homeowner Contact Directory</Button>
