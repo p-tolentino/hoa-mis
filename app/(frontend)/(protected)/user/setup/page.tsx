@@ -1,3 +1,4 @@
+
 import { LogoutButton } from "@/components/auth/logout-button";
 
 const SetupPage = () => {

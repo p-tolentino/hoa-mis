@@ -1,26 +1,25 @@
-"use client";
+'use client'
 import {
   Flex,
   Box,
-  Text,
   HStack,
   Select,
   Spacer,
   Input,
-  Stack,
-} from "@chakra-ui/react";
-import AssociationContactDirectoryTable from "../../../components/associationContactDirectory-components/AssociationContactDirectoryTable";
+  Stack
+} from '@chakra-ui/react'
+import AssociationContactDirectoryTable from '@/app/components/associationContactDirectory-components/AssociationContactDirectoryTable'
 
-function AssociationContactDirectory() {
+function AssociationContactDirectory () {
   return (
-    <Box w="100rem" h="100rem">
-      <Flex id="association-contact-directory">
-        <Stack direction="row" w="100%">
-          <HStack w="30%">
+    <Box w='100rem' h='100rem'>
+      <Flex id='association-contact-directory'>
+        <Stack direction='row' w='100%'>
+          <HStack w='30%'>
             <Select
-              size="sm"
-              fontFamily="font.body"
-              placeholder="Filter Position"
+              size='sm'
+              fontFamily='font.body'
+              placeholder='Filter Position'
               // value={selectedMemberType}
               // onChange={handleMemberTypeFilterChange}
             >
@@ -36,9 +35,9 @@ function AssociationContactDirectory() {
             </Select>
             <Spacer />
             <Select
-              size="sm"
-              fontFamily="font.body"
-              placeholder="Sort Name"
+              size='sm'
+              fontFamily='font.body'
+              placeholder='Sort Name'
               // value={selectedMemberName}
               // onChange={handleMemberTypeFilterChange}
             >
@@ -52,13 +51,13 @@ function AssociationContactDirectory() {
             </Select>
           </HStack>
           <Spacer />
-          <Stack align="flex-end" w="20%">
-            <Input size="sm" type="string" placeholder="Search" />
+          <Stack align='flex-end' w='20%'>
+            <Input size='sm' type='string' placeholder='Search' />
           </Stack>
         </Stack>
       </Flex>
       <AssociationContactDirectoryTable />
     </Box>
-  );
+  )
 }
-export default AssociationContactDirectory;
+export default AssociationContactDirectory
