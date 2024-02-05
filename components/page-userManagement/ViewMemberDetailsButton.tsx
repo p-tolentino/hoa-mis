@@ -25,9 +25,23 @@ import {
 const ViewMemberDetailsButton = () => {
   const action = "Member Information";
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const data = [
+    {
+      houseNoStreet: "House No. & Street:",
+      numName: "00 Apple Street",
+      contactNumber: "Contact Number",
+      number: "0900 000 0000",
+      cNlink: "tel:+63-900-000-0000",
+      emailAddress: "Email Address",
+      email: "john.doe@gmail.com",
+      eAlink: "mailto:john.doe@gmail.com",
+    },
+  ];
+
   return (
     <>
       <Button
+        fontFamily="font.body"
         onClick={() => onOpen()}
         key={action}
         colorScheme="green"
@@ -37,12 +51,14 @@ const ViewMemberDetailsButton = () => {
         {action}
       </Button>
 
-      <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="md">
+      <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="lg">
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader mt="10px">
-            <Heading size="md">{action}</Heading>
+            <Heading size="md" fontFamily="font.heading">
+              {action}
+            </Heading>
           </DrawerHeader>
           <DrawerBody>
             <Stack spacing={5} paddingRight="20px">
@@ -71,7 +87,7 @@ const ViewMemberDetailsButton = () => {
                   <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
                     Biography
                   </Heading>
-                  <Text fontFamily="font.body">
+                  <Text fontFamily="font.body" textAlign="justify">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Sequi, quia vitae adipisci quasi vel consequuntur, officiis
                     magnam iusto repellat eaque deleniti quaerat atque autem
@@ -85,30 +101,55 @@ const ViewMemberDetailsButton = () => {
                   <Text>
                     <Table>
                       <Tbody>
-                        <Tr fontFamily="font.body">
-                          <Td px={3} py={1} style={{ fontWeight: "bold" }}>
-                            House No. & Street:
-                          </Td>
-                          <Td px={0} py={1}>
-                            00 Apple Street
-                          </Td>
-                        </Tr>
-                        <Tr fontFamily="font.body">
-                          <Td px={3} py={1} style={{ fontWeight: "bold" }}>
-                            Contact Number:
-                          </Td>
-                          <Td px={0} py={1}>
-                            0900 000 0000
-                          </Td>
-                        </Tr>
-                        <Tr fontFamily="font.body">
-                          <Td px={3} py={1} style={{ fontWeight: "bold" }}>
-                            Email Address:
-                          </Td>
-                          <Td px={0} py={1}>
-                            john.doe@gmail.com
-                          </Td>
-                        </Tr>
+                        {data.map((val, i) => (
+                          <Tr key={i} fontFamily="font.body">
+                            <Td
+                              px={3}
+                              py={1}
+                              fontFamily="font.body"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {val.houseNoStreet}
+                            </Td>
+                            <Td px={0} py={1} fontFamily="font.body">
+                              {val.numName}
+                            </Td>
+                          </Tr>
+                        ))}
+                        {data.map((val, i) => (
+                          <Tr key={i} fontFamily="font.body">
+                            <Td
+                              px={3}
+                              py={1}
+                              fontFamily="font.body"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {val.contactNumber}
+                            </Td>
+                            <Td px={0} py={1} fontFamily="font.body">
+                              <a href={val.cNlink} target="_blank">
+                                {val.number}
+                              </a>
+                            </Td>
+                          </Tr>
+                        ))}
+                        {data.map((val, i) => (
+                          <Tr key={i} fontFamily="font.body">
+                            <Td
+                              px={3}
+                              py={1}
+                              fontFamily="font.body"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {val.emailAddress}
+                            </Td>
+                            <Td px={0} py={1} fontFamily="font.body">
+                              <a href={val.eAlink} target="_blank">
+                                {val.email}
+                              </a>
+                            </Td>
+                          </Tr>
+                        ))}
                       </Tbody>
                     </Table>
                   </Text>
@@ -118,7 +159,12 @@ const ViewMemberDetailsButton = () => {
                   <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
                     Interests & Hobbies
                   </Heading>
-                  <UnorderedList spacing={2} fontFamily="font.body" px="15px">
+                  <UnorderedList
+                    spacing={2}
+                    fontFamily="font.body"
+                    px="15px"
+                    textAlign="justify"
+                  >
                     <ListItem>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </ListItem>
