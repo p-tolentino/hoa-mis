@@ -93,6 +93,7 @@ export default function MyProfile() {
                   </Td>
                 </Tr>
                 <Tr>
+
                   <Td px={0} py={2} style={{ fontWeight: "bold" }}>
                     Email Address
                   </Td>
