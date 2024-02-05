@@ -133,7 +133,7 @@ export default function MembershipModuleMenu () {
                     fontWeight: 'semibold'
                   }}
                   as={Link}
-                  href='/system-admin/membership/membership-card'
+                  href='/system-admin/membership/membership-form'
                 >
                   Membership Form
                 </Button>
