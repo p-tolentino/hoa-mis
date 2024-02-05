@@ -1,188 +1,206 @@
-"use client";
+'use client'
 import {
-  Box,
   Input,
   FormControl,
   FormLabel,
-  Stack,
   Flex,
-  Spacer,
-} from "@chakra-ui/react";
+  Grid,
+  GridItem
+} from '@chakra-ui/react'
 
-function PersonalInformationForm() {
+function PersonalInformationForm () {
   return (
-    <Stack w="100%">
-      <FormControl>
-        <FormLabel fontSize="md" fontFamily="font.body">
-          Full Name:
-        </FormLabel>
-        <Flex>
-          <Input
-            isRequired
-            type="string"
-            placeholder="First Name"
-            fontSize="14px"
-            size="md"
-            w="25%"
-          />
-          <Spacer />
-          <Input
-            type="string"
-            placeholder="Middle Name"
-            fontSize="14px"
-            size="md"
-            w="25%"
-          />
-          <Spacer />
-          <Input
-            type="string"
-            placeholder="Last Name"
-            fontSize="14px"
-            size="md"
-            w="25%"
-          />
-        </Flex>
-      </FormControl>
-      <FormControl>
-        <Stack>
-          <Flex direction="row">
-            <Box>
-              <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
-                ID No. Issued:
-              </FormLabel>
-              <Input
-                isRequired
-                type="number"
-                placeholder="XXXXX"
-                fontSize="14px"
-                size="md"
-              />
-            </Box>
-            <Spacer />
-            <Box>
-              <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
-                Upload ID:
-              </FormLabel>
-              <Input isRequired type="number" fontSize="14px" size="md" />
-            </Box>
-            <Spacer />
-            <Box>
-              <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
-                Date of Birth
-              </FormLabel>
-              <Input
-                isRequired
-                type="date"
-                placeholder="XXXXX"
-                fontSize="14px"
-                size="md"
-              />
-            </Box>
+    <Grid
+      templateRows='repeat(4, 1fr)'
+      templateColumns={'repeat(5, 1fr)'}
+      gap={'2rem'}
+      h='40vh'
+    >
+      {/* Full Name */}
+      <GridItem colSpan={3}>
+        <FormControl isRequired>
+          <FormLabel fontSize='md' fontFamily='font.body'>
+            Full Name:
+          </FormLabel>
+          <Flex gap='1rem'>
+            {/* First Name */}
+            <Input
+              type='string'
+              placeholder='First Name'
+              fontSize='14px'
+              fontFamily={'font.body'}
+              size='md'
+            />
+            {/* Middle Name */}
+            <Input
+              type='string'
+              placeholder='Middle Name'
+              fontFamily={'font.body'}
+              fontSize='14px'
+              size='md'
+            />
+            {/* Last Name */}
+            <Input
+              type='string'
+              placeholder='Last Name'
+              fontFamily={'font.body'}
+              fontSize='14px'
+              size='md'
+            />
           </Flex>
-        </Stack>
-      </FormControl>
-      <FormControl>
-        <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
-          Complete Home Address:
-        </FormLabel>
-        <Input
-          isRequired
-          type="string"
-          placeholder="House No."
-          fontSize="14px"
-          size="md"
-          w="20%"
-          mr="100"
-        />
-        <Input
-          type="string"
-          placeholder="Street Name"
-          fontSize="14px"
-          size="md"
-          w="20%"
-          mr="100"
-        />
-        <Input
-          type="string"
-          placeholder="Barangay No."
-          fontSize="14px"
-          size="md"
-          w="20%"
-        />
-      </FormControl>
-      <FormControl>
-        <FormLabel mt="30px" fontSize="md" fontFamily="font.body" />
-        <Input
-          isRequired
-          type="string"
-          placeholder="City/Municipality"
-          fontSize="14px"
-          size="md"
-          w="20%"
-          mr="100"
-        />
-        <Input
-          type="string"
-          placeholder="Region"
-          fontSize="14px"
-          size="md"
-          w="20%"
-          mr="100"
-        />
-        <Input
-          type="string"
-          placeholder="Postal Code"
-          fontSize="14px"
-          size="md"
-          w="20%"
-        />
-      </FormControl>
-      <FormControl>
-        <Stack direction="row" spacing="85">
-          <Box>
-            <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
+        </FormControl>
+      </GridItem>
+
+      {/* Upload ID */}
+      <GridItem colSpan={2} rowSpan={4}>
+        <FormControl isRequired>
+          <FormLabel fontSize='md' fontFamily='font.body'>
+            Upload ID:
+          </FormLabel>
+          <Input type='file' h='400px' textAlign={'center'}></Input>
+        </FormControl>
+      </GridItem>
+
+      {/* Date of Birth and ID Number*/}
+      <GridItem colSpan={3}>
+        <Flex gap='1rem'>
+          {/* Date of Birth */}
+          <FormControl isRequired>
+            <FormLabel fontSize='md' fontFamily='font.body'>
+              Date of Birth
+            </FormLabel>
+            <Input
+              isRequired
+              type='date'
+              placeholder='XXXXX'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+          </FormControl>
+          {/* ID Number */}
+          <FormControl>
+            <FormLabel fontSize='md' fontFamily='font.body'>
+              ID No. Issued:
+            </FormLabel>
+            <Input
+              isRequired
+              type='number'
+              placeholder='XXXXX'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+          </FormControl>
+        </Flex>
+      </GridItem>
+
+      {/* Complete Home Address */}
+      <GridItem colSpan={3}>
+        <FormControl isRequired>
+          <FormLabel fontSize='md' fontFamily='font.body'>
+            Complete Home Address:
+          </FormLabel>
+          <Flex gap={'1rem'}>
+            {/* House Number */}
+            <Input
+              type='string'
+              placeholder='House No.'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+            {/* Street Name */}
+            <Input
+              type='string'
+              placeholder='Street Name'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+            {/* Barangay Number */}
+            <Input
+              type='string'
+              placeholder='Barangay No.'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+          </Flex>
+          <Flex gap={'1rem'} mt='1rem'>
+            {/* City / Municipality */}
+            <Input
+              type='string'
+              placeholder='City/Municipality'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+            {/* Region */}
+            <Input
+              type='string'
+              placeholder='Region'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+            {/* Postal Code */}
+            <Input
+              type='string'
+              placeholder='Postal Code'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
+            />
+          </Flex>
+        </FormControl>
+      </GridItem>
+
+      {/* Personal Info */}
+      <GridItem colSpan={3}>
+        <Flex gap='1rem'>
+          {/* Contact Number */}
+          <FormControl isRequired>
+            <FormLabel fontSize='md' fontFamily='font.body'>
               Contact Number:
             </FormLabel>
             <Input
-              isRequired
-              type="number"
-              placeholder="0900 000 0000"
-              fontSize="14px"
-              size="md"
-              w="95%"
-              mr="100"
+              type='number'
+              placeholder='0900 000 0000'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
             />
-          </Box>
-          <Box>
-            <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
+          </FormControl>
+          {/* Email Address */}
+          <FormControl isRequired>
+            <FormLabel fontSize='md' fontFamily='font.body'>
               Email Address:
             </FormLabel>
             <Input
-              isRequired
-              type="email"
-              placeholder="email.address@gmail.com"
-              fontSize="14px"
-              size="md"
-              w="95%"
-              mr="100"
+              type='email'
+              placeholder='email.address@gmail.com'
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
             />
-          </Box>
-          <Box>
-            <FormLabel mt="30px" fontSize="md" fontFamily="font.body">
+          </FormControl>
+          {/* Religion */}
+          <FormControl isRequired>
+            <FormLabel fontSize='md' fontFamily='font.body'>
               Religion:
             </FormLabel>
             <Input
-              isRequired
-              type="string"
-              fontSize="14px"
-              size="md"
-              w="120%"
-              mr="100"
+              type='string'
+              placeholder=''
+              fontFamily='font.body'
+              fontSize='14px'
+              size='md'
             />
-          </Box>
-        </Stack>
-      </FormControl>
-    </Stack>
-  );
+          </FormControl>
+        </Flex>
+      </GridItem>
+    </Grid>
+  )
 }
-export default PersonalInformationForm;
+export default PersonalInformationForm
