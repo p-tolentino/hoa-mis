@@ -1,18 +1,18 @@
-'use client'
-import { Table, Thead, Tbody, Box, Tr, Th, Td, Button } from '@chakra-ui/react'
-import ViewMemberDetailsButton from './ViewMemberDetailsButton'
+"use client";
+import { Table, Thead, Tbody, Box, Tr, Th, Td, Button } from "@chakra-ui/react";
+import ViewMemberDetailsButton from "./ViewMemberDetailsButton";
 
 const UserManagementTable = () => {
   return (
     <Box>
       <Table
-        mt='30px'
-        size='md'
-        variant='striped'
-        colorScheme='gray'
+        mt="30px"
+        size="md"
+        variant="striped"
+        colorScheme="gray"
         // tableLayout="fixed"
       >
-        <Thead backgroundColor='brand.400'>
+        <Thead backgroundColor="brand.300">
           {/* <Tr width="full">
                 {props.headers.map((header, index) => (
                   <Th
@@ -23,14 +23,22 @@ const UserManagementTable = () => {
                   </Th>
                 ))}
               </Tr> */}
-          <Tr width='full'>
-            <Th>Status</Th>
-            <Th>Member Type</Th>
-            <Th>Member Name</Th>
-            <Th>View Member Details</Th>
+          <Tr width="full">
+            <Th fontFamily="font.heading" color="black">
+              Status
+            </Th>
+            <Th fontFamily="font.heading" color="black">
+              Member Type
+            </Th>
+            <Th fontFamily="font.heading" color="black">
+              Member Name
+            </Th>
+            <Th fontFamily="font.heading" color="black">
+              View Member Details
+            </Th>
           </Tr>
         </Thead>
-        <Tbody>
+        <Tbody fontSize="sm">
           {/* {props.data.map((row, rowIndex) => {
                 const keys = Object.keys(row);
                 const cells = keys.map((key) =>
@@ -39,33 +47,33 @@ const UserManagementTable = () => {
                 return <Tr key={rowIndex}>{cells}</Tr>;
               })} */}
           <Tr>
-            <Td>Active</Td>
-            <Td>President</Td>
-            <Td>John Doe</Td>
+            <Td fontFamily="font.body">Active</Td>
+            <Td fontFamily="font.body">President</Td>
+            <Td fontFamily="font.body">John Doe</Td>
             <Td>
               <ViewMemberDetailsButton />
             </Td>
           </Tr>
           <Tr>
-            <Td>Inactive</Td>
-            <Td>Vice President</Td>
-            <Td>Diego Pallasigue</Td>
+            <Td fontFamily="font.body">Inactive</Td>
+            <Td fontFamily="font.body">Vice President</Td>
+            <Td fontFamily="font.body">Diego Pallasigue</Td>
             <Td>
               <ViewMemberDetailsButton />
             </Td>
           </Tr>
           <Tr>
-            <Td>Active</Td>
-            <Td>Resident</Td>
-            <Td>Kathleen Tan</Td>
+            <Td fontFamily="font.body">Active</Td>
+            <Td fontFamily="font.body">Resident</Td>
+            <Td fontFamily="font.body">Kathleen Tan</Td>
             <Td>
               <ViewMemberDetailsButton />
             </Td>
           </Tr>
           <Tr>
-            <Td>Inactive</Td>
-            <Td>Tenant</Td>
-            <Td>Maxine Feliciano</Td>
+            <Td fontFamily="font.body">Inactive</Td>
+            <Td fontFamily="font.body">Tenant</Td>
+            <Td fontFamily="font.body">Maxine Feliciano</Td>
             <Td>
               <ViewMemberDetailsButton />
             </Td>
@@ -73,7 +81,7 @@ const UserManagementTable = () => {
         </Tbody>
       </Table>
     </Box>
-  )
-}
+  );
+};
 
-export default UserManagementTable
+export default UserManagementTable;
