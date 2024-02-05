@@ -30,6 +30,7 @@ enum type {
 }
 
 model User {
+<<<<<<< HEAD
   id           String        @id @default(cuid())
   name String?
   email String?   @unique
@@ -82,6 +83,39 @@ model Vehicle {
   plateNum String?
 
   personalInfo PersonalInfo @relation(fields: [infoID], references: [id])
+=======
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  image         String?
+  password      String?
+  role          UserRole  @default(USER)
+  accounts      Account[]
+  
+  info          PersonalInfo?
+}
+
+model PersonalInfo {
+  id            String    @id @default(cuid())
+  userId        String
+  firstName     String?
+  middleName    String?
+  lastName      String?
+  contact       String?
+  birthday      DateTime?
+  vehicles      Vehicle[]
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([userId])
+}
+
+model Vehicle {
+  id String @id @default(cuid())
+  infoId String
+  plateNum String?
+
+  info PersonalInfo @relation(fields: [infoId], references: [id], onDelete: Cascade)
+>>>>>>> main
 }
 
 model Account {
