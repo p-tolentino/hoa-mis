@@ -99,7 +99,7 @@ export default function MembershipModuleMenu() {
                 variant="outline"
                 _hover={{ bgColor: "brand.300", fontWeight: "semibold" }}
                 as="a"
-                href="/system-admin/membership/membership-card"
+                href="/system-admin/membership/membership-form"
               >
                 Membership Card
               </Button>
