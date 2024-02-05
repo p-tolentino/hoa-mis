@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 import {
   Flex,
   Text,
@@ -8,8 +8,8 @@ import {
   Divider,
   Avatar,
   Heading,
-  Link,
-} from "@chakra-ui/react";
+  Link
+} from '@chakra-ui/react'
 import {
   FiMenu,
   FiHome,
@@ -17,139 +17,140 @@ import {
   FiDollarSign,
   FiBriefcase,
   FiUsers,
-  FiUserCheck,
-} from "react-icons/fi";
-import { BsNewspaper } from "react-icons/bs";
-import { PiBinocularsBold, PiBroomFill } from "react-icons/pi";
-import SidebarItem from "./SidebarItem";
-import { LogoutButton } from "@/components/auth/logout-button";
+  FiUserCheck
+} from 'react-icons/fi'
+import { BsNewspaper } from 'react-icons/bs'
+import { PiBinocularsBold, PiBroomFill } from 'react-icons/pi'
+import SidebarItem from './SidebarItem'
+import { LogoutButton } from '@/components/auth/logout-button'
 
-export default function Sidebar() {
-  const [sidebarSize, changeSidebarSize] = useState("large");
+export default function Sidebar () {
+  // For responsiveness when window is resized
+  const [sidebarSize, changeSidebarSize] = useState('large')
   useEffect(() => {
     const handleResize = () => {
-      const isSmallScreen = window.innerWidth <= 768; // You can adjust the breakpoint (768) as needed
-      changeSidebarSize(isSmallScreen ? "small" : "large");
-    };
+      const isSmallScreen = window.innerWidth <= 768 // You can adjust the breakpoint (768) as needed
+      changeSidebarSize(isSmallScreen ? 'small' : 'large')
+    }
     // Initial check on mount
-    handleResize();
+    handleResize()
     // Event listener for window resize
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize)
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <Flex
-      pos="sticky"
+      pos='sticky'
       top={0}
-      h="100vh"
-      minW={sidebarSize === "small" ? "75px" : "280px"}
-      flexDir="column"
-      justifyContent="space-between"
-      bgColor={"brand.500"}
-      color={"white"}
+      h='100vh'
+      minW={sidebarSize === 'small' ? '75px' : '280px'}
+      flexDir='column'
+      justifyContent='space-between'
+      bgColor={'brand.500'}
+      color={'white'}
       zIndex={3}
     >
       <Flex
-        p={sidebarSize === "small" ? "17%" : "5%"}
-        flexDir="column"
-        w="100%"
-        alignItems={sidebarSize === "small" ? "center" : "flex-start"}
-        as="nav"
+        p={sidebarSize === 'small' ? '17%' : '5%'}
+        flexDir='column'
+        w='100%'
+        alignItems={sidebarSize === 'small' ? 'center' : 'flex-start'}
+        as='nav'
       >
         <IconButton
-          background="none"
-          color={"white"}
-          _hover={{ background: "none" }}
+          background='none'
+          color={'white'}
+          _hover={{ background: 'none' }}
           icon={<FiMenu />}
           onClick={() => {
-            if (sidebarSize === "small") changeSidebarSize("large");
-            else changeSidebarSize("small");
+            if (sidebarSize === 'small') changeSidebarSize('large')
+            else changeSidebarSize('small')
           }}
-          aria-label={""}
-          alignSelf={"flex-start"}
+          aria-label={''}
+          alignSelf={'flex-start'}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={FiHome}
-          title="Dashboard"
+          title='Dashboard'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={FiUserCheck}
-          title="Membership"
+          title='Membership'
           active={true}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={FiDollarSign}
-          title="Finance Management"
+          title='Finance Management'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={FiUsers}
-          title="Community Engagement"
+          title='Community Engagement'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={FiBriefcase}
-          title="Dispute Resolution"
+          title='Dispute Resolution'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={PiBinocularsBold}
-          title="Violation Monitoring"
+          title='Violation Monitoring'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={FiCalendar}
-          title="Facility Reservation"
+          title='Facility Reservation'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={PiBroomFill}
-          title="Maintenance Handling"
+          title='Maintenance Handling'
           active={false}
         />
         <SidebarItem
           sidebarSize={sidebarSize}
           icon={BsNewspaper}
-          title="Election Management"
+          title='Election Management'
           active={false}
         />
       </Flex>
 
       <Flex
-        p="1rem"
-        flexDir="column"
-        w="100%"
-        alignItems={sidebarSize === "small" ? "center" : "flex-start"}
+        p='1rem'
+        flexDir='column'
+        w='100%'
+        alignItems={sidebarSize === 'small' ? 'center' : 'flex-start'}
         mb={4}
       >
         <Divider
-          display={sidebarSize === "small" ? "none" : "flex"}
-          mt={"1rem"}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
+          mt={'1rem'}
         />
-        <Flex mt={4} align="center">
-          <Avatar size="sm" src="avatar-1.jpg" />
+        <Flex mt={4} align='center'>
+          <Avatar size='sm' src='avatar-1.jpg' />
           <Flex
-            flexDir="column"
+            flexDir='column'
             ml={4}
-            display={sidebarSize === "small" ? "none" : "flex"}
+            display={sidebarSize === 'small' ? 'none' : 'flex'}
           >
-            <Heading as="h3" size="sm" fontFamily="font.heading">
+            <Heading as='h3' size='sm' fontFamily='font.heading'>
               John Doe
             </Heading>
-            <Text color="brand.300" fontFamily="font.body">
+            <Text color='brand.300' fontFamily='font.body'>
               Admin
             </Text>
           </Flex>
@@ -157,30 +158,30 @@ export default function Sidebar() {
 
         <Flex
           mt={3}
-          fontSize={"sm"}
-          display={sidebarSize === "small" ? "none" : "flex"}
+          fontSize={'sm'}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
-          <Link href="/admin/my-profile" fontFamily={"font.body"}>
+          <Link href='/admin/my-profile' fontFamily={'font.body'}>
             My Profile
           </Link>
         </Flex>
         <Flex
           mt={2}
-          fontSize={"sm"}
-          display={sidebarSize === "small" ? "none" : "flex"}
+          fontSize={'sm'}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
-          <Text as={Link} href="/admin/settings" fontFamily="font.body">
+          <Text as={Link} href='/admin/settings' fontFamily='font.body'>
             Settings
           </Text>
         </Flex>
         <Flex
           mt={2}
-          fontSize={"sm"}
-          display={sidebarSize === "small" ? "none" : "flex"}
+          fontSize={'sm'}
+          display={sidebarSize === 'small' ? 'none' : 'flex'}
         >
           <LogoutButton>Sign Out</LogoutButton>
         </Flex>
       </Flex>
     </Flex>
-  );
+  )
 }
