@@ -62,7 +62,7 @@ function SignUp() {
               Welcome! Fill up your account
             </Text>
           </Box>
-          <FormControl id="username" isRequired pos={"static"}>
+          <FormControl id="emailaddress" isRequired pos={"static"}>
             <FormLabel fontFamily="font.body">Email Address</FormLabel>
             <Input
               pos={"static"}
@@ -71,19 +71,22 @@ function SignUp() {
               type="string"
             />
           </FormControl>
-          <InputGroup>
-            <Input
-              pos={"static"}
-              fontFamily="font.body"
-              type={show ? "text" : "password"}
-              placeholder="******"
-            />
-            <InputRightElement width="4.5rem">
-              <Button h="1.75rem" size="md" onClick={handleClick}>
-                {show ? <FaRegEyeSlash /> : <FaRegEye />}
-              </Button>
-            </InputRightElement>
-          </InputGroup>
+          <FormControl id="password" isRequired pos={"static"}>
+            <FormLabel fontFamily="font.body">Password</FormLabel>
+            <InputGroup>
+              <Input
+                pos={"static"}
+                fontFamily="font.body"
+                type={show ? "text" : "password"}
+                placeholder="******"
+              />
+              <InputRightElement width="4.5rem">
+                <Button h="1.75rem" size="md" onClick={handleClick}>
+                  {show ? <FaRegEyeSlash /> : <FaRegEye />}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+          </FormControl>
           <Heading
             size="md"
             fontFamily="font.heading"

@@ -74,7 +74,7 @@ export default function SignIn() {
               >
                 or Sign in using Email Address
               </Text>
-              <FormControl id="username">
+              <FormControl id="emailaddress">
                 <FormLabel fontFamily="font.body">Email Address</FormLabel>
                 <Input
                   fontFamily="font.body"
@@ -82,25 +82,22 @@ export default function SignIn() {
                   type="string"
                 />
               </FormControl>
-              <FormLabel fontFamily="font.body">Password</FormLabel>
-              <InputGroup>
-                <Input
-                  pos={"static"}
-                  fontFamily="font.body"
-                  type={show ? "text" : "password"}
-                  placeholder="******"
-                />
-                <InputRightElement width="4.5rem">
-                  <Button
-                    h="1.75rem"
-                    size="md"
-                    onClick={handleClick}
-                    variant="ghost"
-                  >
-                    {show ? <FaRegEyeSlash /> : <FaRegEye />}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
+              <FormControl id="password" pos={"static"}>
+                <FormLabel fontFamily="font.body">Password</FormLabel>
+                <InputGroup>
+                  <Input
+                    pos={"static"}
+                    fontFamily="font.body"
+                    type={show ? "text" : "password"}
+                    placeholder="******"
+                  />
+                  <InputRightElement width="4.5rem">
+                    <Button h="1.75rem" size="md" onClick={handleClick}>
+                      {show ? <FaRegEyeSlash /> : <FaRegEye />}
+                    </Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
               <HStack alignSelf="center">
                 <Text
                   fontSize="14px"
