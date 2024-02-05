@@ -1,11 +1,9 @@
-'use client'
+import Homepage from "./(frontend)/(public)/homepage/page";
 
-import Homepage from './homepage/page'
-
-export default function App () {
+export default function App() {
   return (
     <>
       <Homepage />
     </>
-  )
+  );
 }

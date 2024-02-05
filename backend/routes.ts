@@ -10,26 +10,7 @@ export const publicRoutes = ["/", "/new-verification"];
  * Logged-in users will be redirected to /settings or /dashboard
  * @type {string[]}
  */
-export const authRoutes = [
-  "/sign-in",
-  "/sign-up",
-  "/system-admin",
-  "/system-admin/my-profile",
-  "/system-admin/dashboard",
-  "/system-admin/membership",
-  "/system-admin/membership/user-management",
-  "/system-admin/membership/association-contact-directory",
-  "/system-admin/membership/membership-form",
-  "/system-admin/membership/property-management",
-  "/system-admin/finance-management",
-  "/system-admin/community-engagement",
-  "/system-admin/dispute-resolution",
-  "/system-admin/violation-monitoring",
-  "/system-admin/facility-reservation",
-  "/system-admin/maintenance-handling",
-  "/system-admin/election-management",
-  "/system-admin/settings",
-];
+export const authRoutes = ["/login", "/register"];
 
 /**
  * The prefix for API Authentication routes
@@ -42,4 +23,4 @@ export const apiAuthPrefix = "/api/auth";
  * Default redirect path after logging in
  * @type {string}
  */
-export const DEFAULT_LOGIN_REDIRECT = "/settings";
+export const DEFAULT_LOGIN_REDIRECT = "/user/setup";
