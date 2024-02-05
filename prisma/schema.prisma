@@ -35,12 +35,12 @@ model User {
   email         String?       @unique
   image         String?
   emailVerified DateTime?
-  personalInfo  PersonalInfo?
-  propertyInfo  PropertyInfo?
   status        Status        @default(Active)
   password      String?
   role          UserRole      @default(USER)
   accounts      Account[]
+  info          PersonalInfo?
+  properties    Property[]
 }
 
 model PersonalInfo {
@@ -54,27 +54,7 @@ model PersonalInfo {
   vehicles    Vehicle[]
   type        type?
 
-  user User @relation(fields: [userID], references: [id])
-}
-
-model PropertyInfo {
-  id           String             @id @default(cuid())
-  userID       String             @unique
-  address      String?
-  lotNumber    String?
-  lotSize      String?
-  document     PropertyDocument[]
-  purchaseDate DateTime?
-
-  user User @relation(fields: [userID], references: [id])
-}
-
-model PropertyDocument {
-  id         String  @id @default(cuid())
-  propertyID String
-  fileName   String?
-
-  property PropertyInfo @relation(fields: [propertyID], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userID], references: [id], onDelete: Cascade)
 }
 
 model Vehicle {
@@ -83,6 +63,28 @@ model Vehicle {
   plateNum String?
 
   personalInfo PersonalInfo @relation(fields: [infoID], references: [id])
+}
+
+model Property {
+  id           String       @id @default(cuid())
+  userId       String            
+  address      String?
+  lotNumber    String?
+  lotSize      String?
+  documents    PropertyDocument[]
+  purchaseDate DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model PropertyDocument {
+  id           String       @id @default(cuid())
+  propertyId   String
+  fileName     String?
+  imageUrl     String?
+
+  property     Property @relation(fields: [propertyId], references: [id])
+
 }
 
 model Account {
