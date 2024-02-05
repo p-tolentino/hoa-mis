@@ -45,7 +45,7 @@ model User {
 
 model PersonalInfo {
   id          String    @id @default(cuid())
-  userID      String    @unique
+  userId      String    @unique
   firstName   String?
   middleName  String?
   lastName    String?
@@ -54,15 +54,15 @@ model PersonalInfo {
   vehicles    Vehicle[]
   type        type?
 
-  user User @relation(fields: [userID], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Vehicle {
   id       String  @id @default(cuid())
-  infoID   String
+  infoId   String
   plateNum String?
 
-  personalInfo PersonalInfo @relation(fields: [infoID], references: [id])
+  personalInfo PersonalInfo @relation(fields: [infoId], references: [id])
 }
 
 model Property {
