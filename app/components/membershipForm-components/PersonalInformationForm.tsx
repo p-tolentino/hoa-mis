@@ -97,7 +97,7 @@ function PersonalInformationForm () {
           </FormLabel>
           <Flex>
             <Input
-              type='number'
+              type='string'
               placeholder='Enter Plate No.'
               fontSize='14px'
               size='md'
