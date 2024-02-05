@@ -90,7 +90,7 @@ function Navbar() {
         <Spacer />
         <HStack gap="10">
           <Link
-            href="/"
+            href="/#about"
             _hover={{ color: "#E9C850" }}
             padding="10px"
             fontFamily="font.body"
@@ -150,14 +150,14 @@ function Navbar() {
             padding="10px"
             fontFamily="font.body"
             px="20px"
-            onClick={() => handleLinkClick("test system admin login")}
+            onClick={() => handleLinkClick("test membership module")}
             color={
-              clickedLinkId === "test system admin login"
+              clickedLinkId === "test membership module"
                 ? colors.selected
                 : colors.unselected
             }
           >
-            Test System Admin Login
+            Test System Admin (Login)
           </Link>
         </HStack>
       </Show>

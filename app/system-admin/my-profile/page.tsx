@@ -19,16 +19,15 @@ import EditProfileButton from "../../components/myProfile-components/EditProfile
 
 export default function MyProfile() {
   return (
-    <Box zIndex={1} p="5">
+    <Box zIndex={1}>
       <Flex
-        id="my-profile"
         justifyContent={"space-between"}
-        flexDir={{ sm: "column", md: "row" }}
+        flexDir={{ md: "column", lg: "row" }}
       >
         {/* Profile Information */}
         <Flex gap="1.5rem">
           <Avatar size="2xl" src="avatar-1.jpg" />
-          <Box mb={{ sm: "2rem", md: "0" }}>
+          <Box mb={{ md: "2rem", lg: "0" }}>
             <Heading size="lg" fontFamily={"font.heading"}>
               John Doe
             </Heading>
@@ -66,7 +65,7 @@ export default function MyProfile() {
       <SimpleGrid
         columns={2}
         mt="3rem"
-        spacing={5}
+        spacing={10}
         minChildWidth={{ md: "35vw", lg: "20vw" }}
       >
         {/* Personal Information */}
@@ -106,7 +105,7 @@ export default function MyProfile() {
           </TableContainer>
         </Box>
         {/* Interests & Hobbies */}
-        <Box mt={{ sm: "2rem", md: "0" }}>
+        <Box mt={{ md: "1rem", lg: "0" }}>
           <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
             Interests & Hobbies
           </Heading>

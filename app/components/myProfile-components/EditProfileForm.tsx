@@ -3,6 +3,7 @@
 import {
   Button,
   FormControl,
+  FormHelperText,
   FormLabel,
   Input,
   Textarea
@@ -29,6 +30,10 @@ export default function EditProfileForm () {
           placeholder='Enter your interests and hobbies here'
           resize={'none'}
         ></Textarea>
+        <FormHelperText fontSize={'sm'} fontStyle={'italic'}>
+          Note: To improve readability, each sentence will be transformed into a
+          bullet point.
+        </FormHelperText>
       </FormControl>
 
       {/* Save Button */}
