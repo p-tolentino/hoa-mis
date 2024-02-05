@@ -6,9 +6,8 @@ function UserManagement() {
   return (
     <Box w="100rem" h="100rem">
       <Flex id="user-management">
-        <HStack align="flex-start" justifyContent="center">
+        <HStack w="30%">
           <Select
-            width="150%"
             size="sm"
             fontFamily="font.body"
             placeholder="Filter Member Type"
@@ -27,7 +26,6 @@ function UserManagement() {
           </Select>
           <Spacer />
           <Select
-            width="150%"
             size="sm"
             fontFamily="font.body"
             placeholder="Sort Member Name"

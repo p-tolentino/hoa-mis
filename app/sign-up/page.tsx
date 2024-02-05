@@ -13,11 +13,19 @@ import {
   Heading,
   Text,
   Select,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
+import React from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 function SignUp() {
+  const [show, setShow] = React.useState(false);
+  const handleClick = () => setShow(!show);
+
   return (
     <Box>
+      <Navbar />
       <Flex
         w="100%"
         h="100%"
@@ -63,10 +71,19 @@ function SignUp() {
               type="string"
             />
           </FormControl>
-          <FormControl id="password" isRequired pos={"static"}>
-            <FormLabel fontFamily="font.body">Password</FormLabel>
-            <Input pos={"static"} placeholder="******" type="password" />
-          </FormControl>
+          <InputGroup>
+            <Input
+              pos={"static"}
+              fontFamily="font.body"
+              type={show ? "text" : "password"}
+              placeholder="******"
+            />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="md" onClick={handleClick}>
+                {show ? <FaRegEyeSlash /> : <FaRegEye />}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
           <Heading
             size="md"
             fontFamily="font.heading"
