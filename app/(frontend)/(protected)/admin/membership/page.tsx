@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import {
   Flex,
@@ -7,74 +7,143 @@ import {
   Heading,
   Button,
   ButtonGroup,
-} from "@chakra-ui/react";
-import Link from "next/link";
+  Box,
+  Text
+} from '@chakra-ui/react'
+import Link from 'next/link'
 
-export default function MembershipModuleMenu() {
-  // const membershipMenu_categories = ['Property Management', 'User Registration']
-  // const admin_buttons = ['User Management', 'Homeowner Contact Directory']
-  // const propertyManagement_buttons = ['Browse House Lots (Map)']
-  // const userRegistration_buttons = ['Membershsip Card']
-
+export default function MembershipModuleMenu () {
   return (
-    <Flex p="8" gap={"2rem"} wrap={"wrap"}>
-      <Flex flexDir={"column"}>
-        <Heading size="md" mb="1rem" fontFamily="font.heading">
+    <Flex p='1rem' gap='5rem'>
+      {/* Admin Functions */}
+      <Box mb='3rem'>
+        <Heading size='md' mb='1rem' fontFamily='font.heading'>
           Admin
         </Heading>
-
-        <Card minW="20vw" h="max-content" pb="1.5rem">
+        <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
           <CardBody>
             <ButtonGroup
-              flexDir={"column"}
-              gap={"0.5rem"}
-              minW={"100%"}
-              fontFamily="font.body"
+              flexDir={'column'}
+              gap={'0.5rem'}
+              minW={'100%'}
+              fontFamily='font.body'
             >
-              <Button as="a" href="/admin/membership/user-management">
+              {/* User Management */}
+              <Button
+                fontSize={'lg'}
+                fontWeight='400'
+                bgColor='brand.300'
+                _hover={{
+                  bgColor: '#fcdf86',
+                  transform: 'scale(1.02)',
+                  fontWeight: 'semibold'
+                }}
+                as={Link}
+                href='/admin/membership/user-management'
+              >
                 User Management
               </Button>
-              <Button>Homeowner Contact Directory</Button>
-            </ButtonGroup>
-          </CardBody>
-        </Card>
-      </Flex>
-      <Flex flexDir={"column"}>
-        <Heading size="md" mb="1rem" fontFamily="font.heading">
-          Property Management
-        </Heading>
-        <Card minW="20vw" h="max-content" pb="1.5rem">
-          <CardBody>
-            <ButtonGroup
-              flexDir={"column"}
-              gap={"0.5rem"}
-              minW={"100%"}
-              fontFamily="font.body"
-            >
-              <Button as={Link} href={"/admin/membership/property-management"}>
-                Browse House Lots (Map)
+              <Text size={'sm'} mb='2rem'>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
+                quo veritatis repudiandae amet deserunt pariatur?
+              </Text>
+
+              {/* Association Contact Directory */}
+              <Button
+                fontSize={'lg'}
+                fontWeight='400'
+                bgColor='brand.300'
+                _hover={{
+                  bgColor: '#fcdf86',
+                  transform: 'scale(1.02)',
+                  fontWeight: 'semibold'
+                }}
+                as={Link}
+                href='/admin/membership/association-contact-directory'
+              >
+                Association Contact Directory
               </Button>
+              <Text size={'sm'}>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
+                quo veritatis repudiandae amet deserunt pariatur?
+              </Text>
             </ButtonGroup>
           </CardBody>
         </Card>
-      </Flex>
-      <Flex flexDir={"column"}>
-        <Heading size="md" mb="1rem" fontFamily="font.heading">
-          User Registration
-        </Heading>
-        <Card minW="20vw" h="max-content" pb="1.5rem">
-          <CardBody>
-            <ButtonGroup
-              flexDir={"column"}
-              gap={"0.5rem"}
-              minW={"100%"}
-              fontFamily="font.body"
-            >
-              <Button>Membership Card</Button>
-            </ButtonGroup>
-          </CardBody>
-        </Card>
-      </Flex>
+      </Box>
+      <Box>
+        {/* Property Management */}
+        <Box mb='3rem'>
+          <Heading size='md' mb='1rem' fontFamily='font.heading'>
+            Property Management
+          </Heading>
+          <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
+            <CardBody>
+              <ButtonGroup
+                flexDir={'column'}
+                gap={'0.5rem'}
+                minW={'100%'}
+                fontFamily='font.body'
+              >
+                <Button
+                  fontSize={'lg'}
+                  fontWeight='400'
+                  bgColor='brand.300'
+                  _hover={{
+                    bgColor: '#fcdf86',
+                    transform: 'scale(1.02)',
+                    fontWeight: 'semibold'
+                  }}
+                  as={Link}
+                  href={'/admin/membership/property-management'}
+                >
+                  Browse House Lots (Map)
+                </Button>
+                <Text size={'sm'}>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Modi, quo veritatis repudiandae amet deserunt pariatur?
+                </Text>
+              </ButtonGroup>
+            </CardBody>
+          </Card>
+        </Box>
+
+        {/* User Registration */}
+        <Box>
+          <Heading size='md' mb='1rem' fontFamily='font.heading'>
+            User Registration
+          </Heading>
+          <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
+            <CardBody>
+              <ButtonGroup
+                flexDir={'column'}
+                gap={'0.5rem'}
+                minW={'100%'}
+                fontFamily='font.body'
+              >
+                <Button
+                  fontSize={'lg'}
+                  fontWeight='400'
+                  bgColor='brand.300'
+                  _hover={{
+                    bgColor: '#fcdf86',
+                    transform: 'scale(1.02)',
+                    fontWeight: 'semibold'
+                  }}
+                  as={Link}
+                  href='/admin/membership/membership-form'
+                >
+                  Membership Form
+                </Button>
+                <Text size={'sm'}>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Modi, quo veritatis repudiandae amet deserunt pariatur?
+                </Text>
+              </ButtonGroup>
+            </CardBody>
+          </Card>
+        </Box>
+      </Box>
     </Flex>
-  );
+  )
 }
