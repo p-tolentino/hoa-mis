@@ -1,17 +1,18 @@
-import { LogoutButton } from '@/components/auth/logout-button'
+
+import { LogoutButton } from "@/components/auth/logout-button";
 
 const SetupPage = () => {
   return (
-    <div className='flex'>
+    <div className="flex">
       Setup
       <LogoutButton>
-        <span className='ml-10'>Logout</span>
+        <span className="ml-10">Logout</span>
       </LogoutButton>
     </div>
-  )
-}
+  );
+};
 
-export default SetupPage
+export default SetupPage;
 
 {
   /* <Heading

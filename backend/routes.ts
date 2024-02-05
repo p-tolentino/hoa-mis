@@ -10,7 +10,7 @@ export const publicRoutes = ['/', '/new-verification']
  * Logged-in users will be redirected to /settings or /dashboard
  * @type {string[]}
  */
-export const authRoutes = ['/login', '/register']
+export const authRoutes = ["/login", "/register"];
 
 /**
  * The prefix for API Authentication routes
@@ -23,4 +23,5 @@ export const apiAuthPrefix = '/api/auth'
  * Default redirect path after logging in
  * @type {string}
  */
-export const DEFAULT_LOGIN_REDIRECT = '/user/setup'
+
+export const DEFAULT_LOGIN_REDIRECT = "/user/setup";

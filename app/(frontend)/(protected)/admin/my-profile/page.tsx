@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Avatar,
@@ -13,30 +13,30 @@ import {
   Td,
   Text,
   Tr,
-  UnorderedList
-} from '@chakra-ui/react'
-import EditProfileButton from '@/components/page-myProfile/EditProfileButton'
+  UnorderedList,
+} from "@chakra-ui/react";
+import EditProfileButton from "@/components/page-myProfile/EditProfileButton";
 
-export default function MyProfile () {
+export default function MyProfile() {
   return (
     <Box zIndex={1}>
       <Flex
-        justifyContent={'space-between'}
-        flexDir={{ md: 'column', lg: 'row' }}
+        justifyContent={"space-between"}
+        flexDir={{ md: "column", lg: "row" }}
       >
         {/* Profile Information */}
-        <Flex gap='1.5rem'>
-          <Avatar size='2xl' src='avatar-1.jpg' />
-          <Box mb={{ md: '2rem', lg: '0' }}>
-            <Heading size='lg' fontFamily={'font.heading'}>
+        <Flex gap="1.5rem">
+          <Avatar size="2xl" src="avatar-1.jpg" />
+          <Box mb={{ md: "2rem", lg: "0" }}>
+            <Heading size="lg" fontFamily={"font.heading"}>
               John Doe
             </Heading>
-            <Box fontFamily={'font.body'}>
-              <Text fontSize={'24px'}>Admin | President</Text>
-              <Text fontSize={'sm'} lineHeight={0.5} mt='1rem'>
+            <Box fontFamily={"font.body"}>
+              <Text fontSize={"24px"}>Admin | President</Text>
+              <Text fontSize={"sm"} lineHeight={0.5} mt="1rem">
                 Status:
               </Text>
-              <Text fontSize={'24px'} color={'green'}>
+              <Text fontSize={"24px"} color={"green"}>
                 Active
               </Text>
             </Box>
@@ -47,11 +47,11 @@ export default function MyProfile () {
       </Flex>
 
       {/* Biography */}
-      <Box mt='2rem'>
-        <Heading size='md' fontFamily={'font.heading'} mb={'1rem'}>
+      <Box mt="2rem">
+        <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
           Biography
         </Heading>
-        <Text fontFamily={'font.body'}>
+        <Text fontFamily={"font.body"}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quia
           vitae adipisci quasi vel consequuntur, officiis magnam iusto repellat
           eaque deleniti quaerat atque autem culpa enim laborum et nobis quod
@@ -64,20 +64,20 @@ export default function MyProfile () {
 
       <SimpleGrid
         columns={2}
-        mt='3rem'
+        mt="3rem"
         spacing={10}
-        minChildWidth={{ md: '35vw', lg: '20vw' }}
+        minChildWidth={{ md: "35vw", lg: "20vw" }}
       >
         {/* Personal Information */}
         <Box>
-          <Heading size='md' fontFamily={'font.heading'} mb={'1rem'}>
+          <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
             Personal Information
           </Heading>
           <TableContainer>
-            <Table w='35vw'>
+            <Table w="35vw">
               <Tbody>
                 <Tr>
-                  <Td px={0} py={2} style={{ fontWeight: 'bold' }}>
+                  <Td px={0} py={2} style={{ fontWeight: "bold" }}>
                     House No. & Street
                   </Td>
                   <Td px={0} py={2}>
@@ -85,7 +85,7 @@ export default function MyProfile () {
                   </Td>
                 </Tr>
                 <Tr>
-                  <Td px={0} py={2} style={{ fontWeight: 'bold' }}>
+                  <Td px={0} py={2} style={{ fontWeight: "bold" }}>
                     Contact Number
                   </Td>
                   <Td px={0} py={2}>
@@ -93,7 +93,8 @@ export default function MyProfile () {
                   </Td>
                 </Tr>
                 <Tr>
-                  <Td px={0} py={2} style={{ fontWeight: 'bold' }}>
+
+                  <Td px={0} py={2} style={{ fontWeight: "bold" }}>
                     Email Address
                   </Td>
                   <Td px={0} py={2}>
@@ -105,11 +106,11 @@ export default function MyProfile () {
           </TableContainer>
         </Box>
         {/* Interests & Hobbies */}
-        <Box mt={{ md: '1rem', lg: '0' }}>
-          <Heading size='md' fontFamily={'font.heading'} mb={'1rem'}>
+        <Box mt={{ md: "1rem", lg: "0" }}>
+          <Heading size="md" fontFamily={"font.heading"} mb={"1rem"}>
             Interests & Hobbies
           </Heading>
-          <UnorderedList spacing={2} fontFamily={'font.body'}>
+          <UnorderedList spacing={2} fontFamily={"font.body"}>
             <ListItem>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Asperiores et suscipit cumque dolorem iste dolores atque
@@ -129,5 +130,5 @@ export default function MyProfile () {
         </Box>
       </SimpleGrid>
     </Box>
-  )
+  );
 }
