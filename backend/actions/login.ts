@@ -3,10 +3,14 @@
 import * as z from "zod";
 import { signIn } from "@/auth";
 import { LoginSchema } from "@/backend/schemas";
-import { DEFAULT_LOGIN_REDIRECT } from "@/backend/routes";
+import {
+  DEFAULT_LOGIN_REDIRECT,
+  DEFAULT_FIRST_LOGIN_REDIRECT,
+} from "@/backend/routes";
 
 import { AuthError } from "next-auth";
 import { getUserByEmail } from "@/backend/data/user";
+import { getInfoById } from "@/backend/data/userInfo";
 
 export const login = async (
   values: z.infer<typeof LoginSchema>,
@@ -24,6 +28,11 @@ export const login = async (
 
   if (!existingUser || !existingUser.email || !existingUser.password) {
     return { error: "Email does not exist!" };
+  }
+
+  const existingInfo = await getInfoById(existingUser.id);
+  if (!existingInfo) {
+    callbackUrl = DEFAULT_FIRST_LOGIN_REDIRECT;
   }
 
   try {
