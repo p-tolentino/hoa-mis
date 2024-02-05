@@ -19,7 +19,7 @@ export const authRoutes = [
   "/system-admin/membership",
   "/system-admin/membership/user-management",
   "/system-admin/membership/association-contact-directory",
-  "/system-admin/membership/membership-card",
+  "/system-admin/membership/membership-form",
   "/system-admin/membership/property-management",
   "/system-admin/finance-management",
   "/system-admin/community-engagement",

@@ -9,33 +9,25 @@ import {
   TabPanels,
   TabPanel,
   Progress,
+  Button,
 } from "@chakra-ui/react";
-import OwnershipForm from "../../../components/membershipCard-components/OwnershipForm";
-import PersonalInformationForm from "../../../components/membershipCard-components/PersonalInformationForm";
-import VehicleInformationForm from "../../../components/membershipCard-components/VehicleInformationForm";
+import PersonalInformationForm from "../../../components/membershipForm-components/PersonalInformationForm";
+import VehicleInformationForm from "../../../components/membershipForm-components/VehicleInformationForm";
 
-function UserRegistration() {
+function MembershipForm() {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
   const handleTabChange = (index: number) => {
     setSelectedTabIndex(index);
   };
 
-  const progressValue = (selectedTabIndex + 1) * 33.33;
+  const progressValue = (selectedTabIndex + 1) * 50;
 
   return (
-    <Box w="100rem" h="80vh">
+    <Box maxW="100rem" h="80vh">
       <Flex id="user-registration">
-        <Tabs w="100rem" h="70vh" variant="enclosed" onChange={handleTabChange}>
+        <Tabs w="100%" h="70vh" variant="enclosed" onChange={handleTabChange}>
           <TabList>
-            <Tab
-              fontSize="sm"
-              fontFamily="font.heading"
-              fontWeight="700"
-              color="brand.500"
-            >
-              Ownership
-            </Tab>
             <Tab
               fontSize="sm"
               fontFamily="font.heading"
@@ -55,13 +47,26 @@ function UserRegistration() {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <OwnershipForm />
-            </TabPanel>
-            <TabPanel>
               <PersonalInformationForm />
             </TabPanel>
             <TabPanel>
               <VehicleInformationForm />
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                mt="30px"
+              >
+                <Button
+                  type="submit"
+                  colorScheme="yellow"
+                  borderRadius="10"
+                  fontFamily="font.body"
+                  fontWeight="800"
+                >
+                  Submit Form
+                </Button>
+              </Box>
             </TabPanel>
           </TabPanels>
         </Tabs>
@@ -70,4 +75,4 @@ function UserRegistration() {
     </Box>
   );
 }
-export default UserRegistration;
+export default MembershipForm;

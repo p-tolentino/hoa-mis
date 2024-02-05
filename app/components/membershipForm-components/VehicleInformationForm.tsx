@@ -6,11 +6,13 @@ import {
   FormLabel,
   Stack,
   IconButton,
+  Button,
+  Spacer,
 } from "@chakra-ui/react";
 
 function VehicleInformationForm() {
   return (
-    <Stack w="100rem">
+    <Stack maxW="100rem">
       <FormControl isRequired>
         <FormLabel fontSize="md" fontFamily="font.body">
           Plate No. of vehicle/s owned/used and are parked in this HOA:

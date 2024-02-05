@@ -82,6 +82,7 @@ export default function SignIn() {
                   type="string"
                 />
               </FormControl>
+              <FormLabel fontFamily="font.body">Password</FormLabel>
               <InputGroup>
                 <Input
                   pos={"static"}
