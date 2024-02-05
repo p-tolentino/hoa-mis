@@ -40,7 +40,7 @@ export default function PropertyManagement () {
             borderRadius={'lg'}
             p='2rem'
             alignItems={'left'}
-            spacing={'1.5rem'}
+            spacing={'2rem'}
           >
             <Box>
               <Heading size={'md'} fontFamily={'font.heading'}>
@@ -54,7 +54,13 @@ export default function PropertyManagement () {
               <Heading size={'md'} fontFamily={'font.heading'}>
                 Occupancy Status
               </Heading>
-              <Text fontSize={'lg'} fontFamily={'font.body'} lineHeight={2}>
+              <Text
+                fontSize={'lg'}
+                fontFamily={'font.body'}
+                lineHeight={2}
+                fontWeight='800'
+                color='green'
+              >
                 Occupied
               </Text>
             </Box>
