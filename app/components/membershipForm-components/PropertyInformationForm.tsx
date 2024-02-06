@@ -1,4 +1,11 @@
 'use client'
+
+import React, { ChangeEvent } from 'react';
+
+interface PropertyInformationFormProps {
+  handleInputChange2: (e: ChangeEvent<HTMLInputElement>| string) => void;
+}
+
 import { AddIcon } from '@chakra-ui/icons'
 import {
   FormControl,
@@ -11,7 +18,7 @@ import {
   Select
 } from '@chakra-ui/react'
 
-function PropertyInformationForm () {
+function PropertyInformationForm ({handleInputChange2}: PropertyInformationFormProps) {
   return (
     <Grid
       maxW='100rem'
@@ -31,6 +38,8 @@ function PropertyInformationForm () {
             colorScheme='yellow'
             fontFamily='font.body'
             fontSize='md'
+            name='type'
+            onChange={(value) => handleInputChange2(value)}
           >
             <HStack spacing='24px'>
               <Radio value='Homeowner' size='md'>

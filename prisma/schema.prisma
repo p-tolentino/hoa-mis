@@ -24,11 +24,6 @@ enum Status {
   Inactive
 }
 
-enum type {
-  Homeowner
-  Tenant
-}
-
 model User {
   id            String        @id @default(cuid())
   name          String?
@@ -52,13 +47,13 @@ model PersonalInfo {
   phoneNumber String?
   birthDay    DateTime?
   vehicles    Vehicle[]
-  type        type?
+  type        String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Vehicle {
-  id       String  @id @default(cuid())
+  id       String  @id @default(cuid()) @unique
   infoId   String
   plateNum String?
 
@@ -66,7 +61,7 @@ model Vehicle {
 }
 
 model Property {
-  id           String       @id @default(cuid())
+  id           String       @id @default(cuid()) @unique
   userId       String            
   address      String?
   lotNumber    String?
@@ -78,7 +73,7 @@ model Property {
 }
 
 model PropertyDocument {
-  id           String       @id @default(cuid())
+  id           String       @id @default(cuid()) @unique
   propertyId   String
   fileName     String?
   imageUrl     String?

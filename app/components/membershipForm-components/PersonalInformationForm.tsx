@@ -1,5 +1,24 @@
 'use client'
-import { AddIcon } from '@chakra-ui/icons'
+import React, { ChangeEvent, useState } from 'react';
+
+
+interface PersonalInformationFormProps {
+  data: {
+    first: string,
+    middle: string,
+    last: string,
+    phone: string,
+    birth: string,
+    vehicles: { plate: string }[],
+    type: string,
+  };
+  handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleVehicleChange: (value: string, index: number) => void;
+  addVehicleInput: () => void;
+  removeVehicle: (index: number) => void;
+}
+
+import { AddIcon, CloseIcon} from '@chakra-ui/icons'
 import {
   Input,
   FormControl,
@@ -10,7 +29,9 @@ import {
   IconButton
 } from '@chakra-ui/react'
 
-function PersonalInformationForm () {
+
+
+function PersonalInformationForm ({data, handleInputChange, handleVehicleChange, addVehicleInput, removeVehicle }: PersonalInformationFormProps) {
   return (
     <Grid
       maxW='100rem'
@@ -33,6 +54,8 @@ function PersonalInformationForm () {
               fontSize='14px'
               fontFamily={'font.body'}
               size='md'
+              name='first'
+              onChange={handleInputChange}
             />
             {/* Middle Name */}
             <Input
@@ -41,6 +64,8 @@ function PersonalInformationForm () {
               fontFamily={'font.body'}
               fontSize='14px'
               size='md'
+              name='middle'
+              onChange={handleInputChange}
             />
             {/* Last Name */}
             <Input
@@ -49,6 +74,8 @@ function PersonalInformationForm () {
               fontFamily={'font.body'}
               fontSize='14px'
               size='md'
+              name='last'
+              onChange={handleInputChange}
             />
           </Flex>
         </FormControl>
@@ -69,6 +96,8 @@ function PersonalInformationForm () {
               fontFamily='font.body'
               fontSize='14px'
               size='md'
+              name='birth'
+              onChange={handleInputChange}
             />
           </FormControl>
         </Flex>
@@ -85,6 +114,8 @@ function PersonalInformationForm () {
             fontFamily='font.body'
             fontSize='14px'
             size='md'
+            name='phone'
+            onChange={handleInputChange}
           />
         </FormControl>
       </GridItem>
@@ -95,21 +126,36 @@ function PersonalInformationForm () {
           <FormLabel fontSize='md' fontFamily='font.body'>
             Plate No. of vehicle/s owned/used and are parked in this HOA:
           </FormLabel>
-          <Flex>
+          {data.vehicles.map((vehicle, index) => (
+          <Flex mb="4">
             <Input
-              type='string'
-              placeholder='Enter Plate No.'
-              fontSize='14px'
-              size='md'
-            />
-            <IconButton
-              w='10'
-              ml='20px'
-              size='md'
-              aria-label='Add Plate No.'
-              icon={<AddIcon />}
-            />
+                type="string"
+                placeholder="Enter Plate No."
+                fontSize="14px"
+                size="md"
+                name="vehicle"
+                value={vehicle.plate}
+                onChange={(e) => handleVehicleChange(e.target.value, index)}
+                mr="2"
+              />
+               {index === data.vehicles.length - 1 && ( 
+                <IconButton
+                  onClick={addVehicleInput}
+                  aria-label="Add Plate No."
+                  icon={<AddIcon />}
+                />
+               )}
+        {data.vehicles.length > 1 && ( // Only show remove button if more than one vehicle
+          <IconButton
+            onClick={() => removeVehicle(index)} // Pass index correctly
+            aria-label="Remove Plate No."
+            icon={<CloseIcon />}
+            ml="2" // Add some left margin for spacing
+          />
+        )}
+
           </Flex>
+          ))}
         </FormControl>
       </GridItem>
     </Grid>
