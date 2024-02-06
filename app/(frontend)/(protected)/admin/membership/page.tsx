@@ -50,7 +50,7 @@ export default function MembershipModuleMenu () {
   ]
 
   return (
-    <Flex p='1rem' gap='2.5rem'>
+    <Flex gap='2.5rem'>
       {userManagementMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}

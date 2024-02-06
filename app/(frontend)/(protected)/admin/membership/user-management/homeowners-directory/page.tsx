@@ -1,10 +1,10 @@
 'use client'
 import { Flex, Box, Text, HStack, Select, Spacer } from '@chakra-ui/react'
-import UserManagementTable from '@/components/page-userManagement/UserManagementTable'
+import HomeownersDirectoryTable from '@/components/pages-userManagement/HomeownersDirectoryTable'
 
 export default function HomeownersDirectory () {
   return (
-    <Box w='100rem' h='100rem'>
+    <Box h='100rem'>
       <Flex id='user-management'>
         <HStack w='30%'>
           <Select
@@ -42,7 +42,7 @@ export default function HomeownersDirectory () {
           </Select>
         </HStack>
       </Flex>
-      <UserManagementTable />
+      <HomeownersDirectoryTable />
     </Box>
   )
 }
