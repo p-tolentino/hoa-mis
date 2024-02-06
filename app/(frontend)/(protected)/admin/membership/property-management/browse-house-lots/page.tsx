@@ -21,7 +21,6 @@ export default function PropertyManagement () {
         columns={2}
         spacing={10}
         justifyContent='space-around'
-        p={'1rem'}
         h={'70vh'}
         minChildWidth={{ md: '50vh', lg: '20vh' }}
       >

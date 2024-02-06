@@ -11,8 +11,8 @@ import {
   Progress,
   Button
 } from '@chakra-ui/react'
-import PersonalInformationForm from '@/app/components/membershipForm-components/PersonalInformationForm'
-import VehicleInformationForm from '@/app/components/membershipForm-components/VehicleInformationForm'
+import PersonalInformationForm from './_components/PersonalInformationForm'
+import PropertyInformationForm from './_components/PropertyInformationForm'
 
 function MembershipForm () {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0)
@@ -24,7 +24,7 @@ function MembershipForm () {
   const progressValue = (selectedTabIndex + 1) * 50
 
   return (
-    <Box maxW='100rem' h='80vh'>
+    <Box h='80vh'>
       <Flex id='user-registration'>
         <Tabs w='100%' h='70vh' variant='enclosed' onChange={handleTabChange}>
           <TabList>
@@ -42,7 +42,7 @@ function MembershipForm () {
               fontWeight='700'
               color='brand.500'
             >
-              Vehicle Information
+              Property Information
             </Tab>
           </TabList>
           <TabPanels>
@@ -50,12 +50,12 @@ function MembershipForm () {
               <PersonalInformationForm />
             </TabPanel>
             <TabPanel>
-              <VehicleInformationForm />
+              <PropertyInformationForm />
               <Box
                 display='flex'
                 alignItems='center'
                 justifyContent='center'
-                mt='30px'
+                mt='5rem'
               >
                 <Button
                   type='submit'
