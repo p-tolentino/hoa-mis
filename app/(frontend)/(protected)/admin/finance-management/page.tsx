@@ -4,7 +4,7 @@ import { Flex } from '@chakra-ui/react'
 import ModuleMenuCard from '@/components/page-moduleMenu/ModuleMenuCard'
 
 export default function FinanceManagementMenu () {
-  const homeownerFinanceButtons = [
+  const homeownerMenuCard = [
     {
       category: 'Homeowners',
       category_buttons: ['HOA Dues Payment Record'],
@@ -15,7 +15,7 @@ export default function FinanceManagementMenu () {
     }
   ]
 
-  const hoaOfficerAdminFinanceButtons = [
+  const hoaOfficerAdminMenuCard = [
     {
       category: 'Admins & Officers',
       category_buttons: [
@@ -42,12 +42,12 @@ export default function FinanceManagementMenu () {
   return (
     <Flex p='1rem' gap='2.5rem'>
       {/* Homeowner Finance Buttons */}
-      {homeownerFinanceButtons.map((categoryData, index) => (
+      {homeownerMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}
 
       {/* HOA Admin and Officer Buttons */}
-      {hoaOfficerAdminFinanceButtons.map((categoryData, index) => (
+      {hoaOfficerAdminMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}
     </Flex>
