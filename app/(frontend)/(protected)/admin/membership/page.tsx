@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Flex,
@@ -8,62 +8,62 @@ import {
   Button,
   ButtonGroup,
   Box,
-  Text
-} from '@chakra-ui/react'
-import Link from 'next/link'
+  Text,
+} from "@chakra-ui/react";
+import Link from "next/link";
 
-export default function MembershipModuleMenu () {
+export default function MembershipModuleMenu() {
   return (
-    <Flex p='1rem' gap='5rem'>
+    <Flex p="1rem" gap="5rem">
       {/* Admin Functions */}
-      <Box mb='3rem'>
-        <Heading size='md' mb='1rem' fontFamily='font.heading'>
+      <Box mb="3rem">
+        <Heading size="md" mb="1rem" fontFamily="font.heading">
           Admin
         </Heading>
-        <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
+        <Card maxW="30vw" h="max-content" pb="1.5rem" shadow="md">
           <CardBody>
             <ButtonGroup
-              flexDir={'column'}
-              gap={'0.5rem'}
-              minW={'100%'}
-              fontFamily='font.body'
+              flexDir={"column"}
+              gap={"0.5rem"}
+              minW={"100%"}
+              fontFamily="font.body"
             >
               {/* User Management */}
               <Button
-                fontSize={'lg'}
-                fontWeight='400'
-                bgColor='brand.300'
+                fontSize={"lg"}
+                fontWeight="400"
+                bgColor="brand.300"
                 _hover={{
-                  bgColor: '#fcdf86',
-                  transform: 'scale(1.02)',
-                  fontWeight: 'semibold'
+                  bgColor: "#fcdf86",
+                  transform: "scale(1.02)",
+                  fontWeight: "semibold",
                 }}
                 as={Link}
-                href='/admin/membership/user-management'
+                href="/admin/membership/user-management"
               >
                 User Management
               </Button>
-              <Text size={'sm'} mb='2rem'>
+              <Text size={"sm"} mb="2rem">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
                 quo veritatis repudiandae amet deserunt pariatur?
               </Text>
 
               {/* Association Contact Directory */}
               <Button
-                fontSize={'lg'}
-                fontWeight='400'
-                bgColor='brand.300'
+                fontSize={"lg"}
+                fontWeight="400"
+                bgColor="brand.300"
                 _hover={{
-                  bgColor: '#fcdf86',
-                  transform: 'scale(1.02)',
-                  fontWeight: 'semibold'
+                  bgColor: "#fcdf86",
+                  transform: "scale(1.02)",
+                  fontWeight: "semibold",
                 }}
                 as={Link}
-                href='/admin/membership/association-contact-directory'
+                href="/admin/membership/association-contact-directory"
               >
                 Association Contact Directory
               </Button>
-              <Text size={'sm'}>
+              <Text size={"sm"}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
                 quo veritatis repudiandae amet deserunt pariatur?
               </Text>
@@ -73,33 +73,58 @@ export default function MembershipModuleMenu () {
       </Box>
       <Box>
         {/* Property Management */}
-        <Box mb='3rem'>
-          <Heading size='md' mb='1rem' fontFamily='font.heading'>
+        <Box mb="3rem">
+          <Heading size="md" mb="1rem" fontFamily="font.heading">
             Property Management
           </Heading>
-          <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
+          <Card maxW="30vw" h="max-content" pb="1.5rem" shadow="md">
             <CardBody>
               <ButtonGroup
-                flexDir={'column'}
-                gap={'0.5rem'}
-                minW={'100%'}
-                fontFamily='font.body'
+                flexDir={"column"}
+                gap={"0.5rem"}
+                minW={"100%"}
+                fontFamily="font.body"
               >
                 <Button
-                  fontSize={'lg'}
-                  fontWeight='400'
-                  bgColor='brand.300'
+                  fontSize={"lg"}
+                  fontWeight="400"
+                  bgColor="brand.300"
                   _hover={{
-                    bgColor: '#fcdf86',
-                    transform: 'scale(1.02)',
-                    fontWeight: 'semibold'
+                    bgColor: "#fcdf86",
+                    transform: "scale(1.02)",
+                    fontWeight: "semibold",
                   }}
                   as={Link}
-                  href={'/admin/membership/property-management'}
+                  href={"/admin/membership/property-management"}
                 >
                   Browse House Lots (Map)
                 </Button>
-                <Text size={'sm'}>
+                <Text size={"sm"}>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Modi, quo veritatis repudiandae amet deserunt pariatur?
+                </Text>
+              </ButtonGroup>
+              <ButtonGroup
+                flexDir={"column"}
+                gap={"0.5rem"}
+                minW={"100%"}
+                fontFamily="font.body"
+              >
+                <Button
+                  fontSize={"lg"}
+                  fontWeight="400"
+                  bgColor="brand.300"
+                  _hover={{
+                    bgColor: "#fcdf86",
+                    transform: "scale(1.02)",
+                    fontWeight: "semibold",
+                  }}
+                  as={Link}
+                  href={"/admin/membership/property-information-form"}
+                >
+                  Property Information Form
+                </Button>
+                <Text size={"sm"}>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Modi, quo veritatis repudiandae amet deserunt pariatur?
                 </Text>
@@ -110,32 +135,32 @@ export default function MembershipModuleMenu () {
 
         {/* User Registration */}
         <Box>
-          <Heading size='md' mb='1rem' fontFamily='font.heading'>
+          <Heading size="md" mb="1rem" fontFamily="font.heading">
             User Registration
           </Heading>
-          <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
+          <Card maxW="30vw" h="max-content" pb="1.5rem" shadow="md">
             <CardBody>
               <ButtonGroup
-                flexDir={'column'}
-                gap={'0.5rem'}
-                minW={'100%'}
-                fontFamily='font.body'
+                flexDir={"column"}
+                gap={"0.5rem"}
+                minW={"100%"}
+                fontFamily="font.body"
               >
                 <Button
-                  fontSize={'lg'}
-                  fontWeight='400'
-                  bgColor='brand.300'
+                  fontSize={"lg"}
+                  fontWeight="400"
+                  bgColor="brand.300"
                   _hover={{
-                    bgColor: '#fcdf86',
-                    transform: 'scale(1.02)',
-                    fontWeight: 'semibold'
+                    bgColor: "#fcdf86",
+                    transform: "scale(1.02)",
+                    fontWeight: "semibold",
                   }}
                   as={Link}
-                  href='/admin/membership/membership-form'
+                  href="/admin/membership/membership-form"
                 >
                   Membership Form
                 </Button>
-                <Text size={'sm'}>
+                <Text size={"sm"}>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Modi, quo veritatis repudiandae amet deserunt pariatur?
                 </Text>
@@ -145,5 +170,5 @@ export default function MembershipModuleMenu () {
         </Box>
       </Box>
     </Flex>
-  )
+  );
 }
