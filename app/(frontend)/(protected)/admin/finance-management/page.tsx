@@ -1,7 +1,7 @@
 'use client'
 
 import { Flex } from '@chakra-ui/react'
-import ModuleMenuCard from '@/components/page-moduleMenu/ModuleMenuCard'
+import ModuleMenuCard from '@/components/system/ModuleMenuCard'
 
 export default function FinanceManagementMenu () {
   const homeownerMenuCard = [
@@ -40,7 +40,7 @@ export default function FinanceManagementMenu () {
   ]
 
   return (
-    <Flex p='1rem' gap='2.5rem'>
+    <Flex gap='2.5rem'>
       {/* Homeowner Finance Buttons */}
       {homeownerMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>

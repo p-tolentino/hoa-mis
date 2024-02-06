@@ -2,7 +2,7 @@
 
 import { Flex } from '@chakra-ui/react'
 
-import ModuleMenuCard from '@/components/page-moduleMenu/ModuleMenuCard'
+import ModuleMenuCard from '@/components/system/ModuleMenuCard'
 
 export default function MembershipModuleMenu () {
   const userManagementMenuCard = [
