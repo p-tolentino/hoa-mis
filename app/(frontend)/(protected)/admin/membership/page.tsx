@@ -1,149 +1,67 @@
 'use client'
 
-import {
-  Flex,
-  Card,
-  CardBody,
-  Heading,
-  Button,
-  ButtonGroup,
-  Box,
-  Text
-} from '@chakra-ui/react'
-import Link from 'next/link'
+import { Flex } from '@chakra-ui/react'
+
+import ModuleMenuCard from '@/components/page-moduleMenu/ModuleMenuCard'
 
 export default function MembershipModuleMenu () {
+  const userManagementMenuCard = [
+    {
+      category: 'User Management',
+      category_buttons: ['Homeowners Directory', 'Admin Officers Directory'],
+      category_hrefs: [
+        '/admin/membership/user-management/homeowners-directory',
+        '/admin/membership/user-management/admin-officers-directory'
+      ],
+      category_descriptions: [
+        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
+        '2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+      ]
+    }
+  ]
+
+  const propertyManagementMenuCard = [
+    {
+      category: 'Property Management',
+      category_buttons: [
+        'Browse House Lots (Maps)',
+        'Property Information Form'
+      ],
+      category_hrefs: [
+        '/admin/membership/property-management/browse-house-lots',
+        '/admin/membership/property-management/property-information-form'
+      ],
+      category_descriptions: [
+        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
+        '2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+      ]
+    }
+  ]
+
+  const userRegistrationMenuCard = [
+    {
+      category: 'User Registration',
+      category_buttons: ['Membership Form'],
+      category_hrefs: ['/admin/membership/user-registration/membership-form'],
+      category_descriptions: [
+        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+      ]
+    }
+  ]
+
   return (
-    <Flex p='1rem' gap='5rem'>
-      {/* Admin Functions */}
-      <Box mb='3rem'>
-        <Heading size='md' mb='1rem' fontFamily='font.heading'>
-          Admin
-        </Heading>
-        <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
-          <CardBody>
-            <ButtonGroup
-              flexDir={'column'}
-              gap={'0.5rem'}
-              minW={'100%'}
-              fontFamily='font.body'
-            >
-              {/* User Management */}
-              <Button
-                fontSize={'lg'}
-                fontWeight='400'
-                bgColor='brand.300'
-                _hover={{
-                  bgColor: '#fcdf86',
-                  transform: 'scale(1.02)',
-                  fontWeight: 'semibold'
-                }}
-                as={Link}
-                href='/admin/membership/user-management'
-              >
-                User Management
-              </Button>
-              <Text size={'sm'} mb='2rem'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
-                quo veritatis repudiandae amet deserunt pariatur?
-              </Text>
+    <Flex gap='2.5rem'>
+      {userManagementMenuCard.map((categoryData, index) => (
+        <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
+      ))}
 
-              {/* Association Contact Directory */}
-              <Button
-                fontSize={'lg'}
-                fontWeight='400'
-                bgColor='brand.300'
-                _hover={{
-                  bgColor: '#fcdf86',
-                  transform: 'scale(1.02)',
-                  fontWeight: 'semibold'
-                }}
-                as={Link}
-                href='/admin/membership/association-contact-directory'
-              >
-                Association Contact Directory
-              </Button>
-              <Text size={'sm'}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
-                quo veritatis repudiandae amet deserunt pariatur?
-              </Text>
-            </ButtonGroup>
-          </CardBody>
-        </Card>
-      </Box>
-      <Box>
-        {/* Property Management */}
-        <Box mb='3rem'>
-          <Heading size='md' mb='1rem' fontFamily='font.heading'>
-            Property Management
-          </Heading>
-          <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
-            <CardBody>
-              <ButtonGroup
-                flexDir={'column'}
-                gap={'0.5rem'}
-                minW={'100%'}
-                fontFamily='font.body'
-              >
-                <Button
-                  fontSize={'lg'}
-                  fontWeight='400'
-                  bgColor='brand.300'
-                  _hover={{
-                    bgColor: '#fcdf86',
-                    transform: 'scale(1.02)',
-                    fontWeight: 'semibold'
-                  }}
-                  as={Link}
-                  href={'/admin/membership/property-management'}
-                >
-                  Browse House Lots (Map)
-                </Button>
-                <Text size={'sm'}>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Modi, quo veritatis repudiandae amet deserunt pariatur?
-                </Text>
-              </ButtonGroup>
-            </CardBody>
-          </Card>
-        </Box>
+      {propertyManagementMenuCard.map((categoryData, index) => (
+        <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
+      ))}
 
-        {/* User Registration */}
-        <Box>
-          <Heading size='md' mb='1rem' fontFamily='font.heading'>
-            User Registration
-          </Heading>
-          <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
-            <CardBody>
-              <ButtonGroup
-                flexDir={'column'}
-                gap={'0.5rem'}
-                minW={'100%'}
-                fontFamily='font.body'
-              >
-                <Button
-                  fontSize={'lg'}
-                  fontWeight='400'
-                  bgColor='brand.300'
-                  _hover={{
-                    bgColor: '#fcdf86',
-                    transform: 'scale(1.02)',
-                    fontWeight: 'semibold'
-                  }}
-                  as={Link}
-                  href='/admin/membership/membership-form'
-                >
-                  Membership Form
-                </Button>
-                <Text size={'sm'}>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Modi, quo veritatis repudiandae amet deserunt pariatur?
-                </Text>
-              </ButtonGroup>
-            </CardBody>
-          </Card>
-        </Box>
-      </Box>
+      {userRegistrationMenuCard.map((categoryData, index) => (
+        <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
+      ))}
     </Flex>
   )
 }
