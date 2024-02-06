@@ -1,4 +1,5 @@
 "use client";
+import {useState, useEffect} from 'react'
 import { Flex, Box, Text, HStack, Select, Spacer } from "@chakra-ui/react";
 import UserManagementTable from "@/components/page-userManagement/UserManagementTable";
 
@@ -19,9 +20,7 @@ function UserManagement() {
                 {option.MembetTypeCode}
               </option>
             ))} */}
-            <option>President</option>
-            <option>Vice President</option>
-            <option>Resident</option>
+            <option>Homeowner</option>
             <option>Tenant</option>
           </Select>
           <Spacer />
@@ -42,7 +41,7 @@ function UserManagement() {
           </Select>
         </HStack>
       </Flex>
-      <UserManagementTable />
+      <UserManagementTable/>
     </Box>
   );
 }

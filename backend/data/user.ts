@@ -23,3 +23,23 @@ export const getUserById = async (id: string) => {
     return null;
   }
 };
+
+export const getAllUser = async () => {
+  try {
+    const users = await db.user.findMany();
+    return users;
+  } catch (error) {
+    console.error("Failed to fetch users:", error);
+    throw error; // Re-throw the error after logging or handle it as needed
+  }
+};
+
+export const getAllUserProfile = async () => {
+  try {
+    const users = await db.personalInfo.findMany();
+    return users;
+  } catch (error) {
+    console.error("Failed to fetch users:", error);
+    throw error; // Re-throw the error after logging or handle it as needed
+  }
+};
