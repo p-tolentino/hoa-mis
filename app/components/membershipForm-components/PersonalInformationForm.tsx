@@ -63,7 +63,6 @@ function PersonalInformationForm () {
               Date of Birth
             </FormLabel>
             <Input
-              isRequired
               type='date'
               placeholder='XXXXX'
               fontFamily='font.body'

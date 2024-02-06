@@ -55,7 +55,7 @@ function MembershipForm () {
                 display='flex'
                 alignItems='center'
                 justifyContent='center'
-                mt='30px'
+                mt='10rem'
               >
                 <Button
                   type='submit'
