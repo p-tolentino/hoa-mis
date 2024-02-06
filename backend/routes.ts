@@ -12,12 +12,15 @@ export const publicRoutes = ['/', '/new-verification']
  */
 export const authRoutes = [
   '/login',
-  '/register'
-  //   '/admin/membership',
-  //   '/admin/membership/user-management',
-  //   '/admin/membership/association-contact-directory',
-  //   '/admin/membership/property-management',
-  //   '/admin/membership/membership-form'
+  '/register',
+
+  // Membership Module
+  '/admin/membership',
+  '/admin/membership/user-management',
+  '/admin/membership/association-contact-directory',
+  '/admin/membership/property-management',
+  '/admin/membership/property-management/property-information-form',
+  '/admin/membership/membership-form'
 ]
 
 /**
