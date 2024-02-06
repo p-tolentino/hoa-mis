@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import AssociationContactDirectoryTable from '@/app/components/associationContactDirectory-components/AssociationContactDirectoryTable'
 
-function AssociationContactDirectory () {
+export default function AdminOfficersDirectory () {
   return (
     <Box w='100rem' h='100rem'>
       <Flex id='association-contact-directory'>
@@ -60,4 +60,3 @@ function AssociationContactDirectory () {
     </Box>
   )
 }
-export default AssociationContactDirectory

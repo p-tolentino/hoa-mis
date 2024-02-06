@@ -7,7 +7,8 @@ import {
   Button,
   ButtonGroup,
   Box,
-  Text
+  Text,
+  Stack
 } from '@chakra-ui/react'
 import Link from 'next/link'
 
@@ -35,33 +36,34 @@ const ModuleMenuCard = ({
               minW={'100%'}
               fontFamily='font.body'
             >
-              {category_buttons.map((button, index) => (
-                <>
-                  <Button
-                    key={index}
-                    fontSize={'lg'}
-                    fontWeight='400'
-                    bgColor='brand.300'
-                    _hover={{
-                      bgColor: '#fcdf86',
-                      transform: 'scale(1.02)',
-                      fontWeight: 'semibold'
-                    }}
-                    as={Link}
-                    href={category_hrefs[index]}
-                  >
-                    {button}
-                  </Button>
-                  <Text size={'sm'} mb='2rem'>
-                    {category_descriptions[index]}
-                  </Text>
-                </>
-              ))}
+              <Stack>
+                {category_buttons.map((button, index) => (
+                  <>
+                    <Button
+                      key={index}
+                      fontSize={'lg'}
+                      fontWeight='400'
+                      bgColor='brand.300'
+                      _hover={{
+                        bgColor: '#fcdf86',
+                        transform: 'scale(1.02)',
+                        fontWeight: 'semibold'
+                      }}
+                      as={Link}
+                      href={category_hrefs[index]}
+                    >
+                      {button}
+                    </Button>
+                    <Text size={'sm'} mb='2rem' ml='1rem'>
+                      {category_descriptions[index]}
+                    </Text>
+                  </>
+                ))}
+              </Stack>
             </ButtonGroup>
           </CardBody>
         </Card>
       </Box>
-      <Box></Box>
     </>
   )
 }

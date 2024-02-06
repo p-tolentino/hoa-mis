@@ -10,8 +10,8 @@ export default function MembershipModuleMenu () {
       category: 'User Management',
       category_buttons: ['Homeowners Directory', 'Admin Officers Directory'],
       category_hrefs: [
-        '/admin/membership/user-management',
-        '/admin/membership/association-contact-directory'
+        '/admin/membership/user-management/homeowners-directory',
+        '/admin/membership/user-management/admin-officers-directory'
       ],
       category_descriptions: [
         '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
@@ -28,7 +28,7 @@ export default function MembershipModuleMenu () {
         'Property Information Form'
       ],
       category_hrefs: [
-        '/admin/membership/property-management',
+        '/admin/membership/property-management/browse-house-lots',
         '/admin/membership/property-management/property-information-form'
       ],
       category_descriptions: [
@@ -42,18 +42,7 @@ export default function MembershipModuleMenu () {
     {
       category: 'User Registration',
       category_buttons: ['Membership Form'],
-      category_hrefs: ['/admin/membership/membership-form'],
-      category_descriptions: [
-        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
-      ]
-    }
-  ]
-
-  const systemSettingsMenuCard = [
-    {
-      category: 'System Settings',
-      category_buttons: ['Button'],
-      category_hrefs: ['/admin/membership/'],
+      category_hrefs: ['/admin/membership/user-registration/membership-form'],
       category_descriptions: [
         '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
       ]
@@ -61,7 +50,7 @@ export default function MembershipModuleMenu () {
   ]
 
   return (
-    <Flex p='1rem' gap='1.5rem'>
+    <Flex p='1rem' gap='2.5rem'>
       {userManagementMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}
@@ -71,10 +60,6 @@ export default function MembershipModuleMenu () {
       ))}
 
       {userRegistrationMenuCard.map((categoryData, index) => (
-        <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
-      ))}
-
-      {systemSettingsMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}
     </Flex>
