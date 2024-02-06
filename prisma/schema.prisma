@@ -48,12 +48,13 @@ model PersonalInfo {
   birthDay    DateTime?
   vehicles    Vehicle[]
   type        String?
+  position   String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Vehicle {
-  id       String  @id @default(cuid()) @unique
+  id       String  @id @unique @default(cuid())
   infoId   String
   plateNum String?
 
@@ -61,8 +62,8 @@ model Vehicle {
 }
 
 model Property {
-  id           String       @id @default(cuid()) @unique
-  userId       String            
+  id           String             @id @unique @default(cuid())
+  userId       String
   address      String?
   lotNumber    String?
   lotSize      String?
@@ -73,13 +74,12 @@ model Property {
 }
 
 model PropertyDocument {
-  id           String       @id @default(cuid()) @unique
-  propertyId   String
-  fileName     String?
-  imageUrl     String?
+  id         String  @id @unique @default(cuid())
+  propertyId String
+  fileName   String?
+  imageUrl   String?
 
-  property     Property @relation(fields: [propertyId], references: [id])
-
+  property Property @relation(fields: [propertyId], references: [id])
 }
 
 model Account {
