@@ -1,4 +1,8 @@
+'use server'
+
 import { db } from "@/backend/lib/db";
+import { getUserByEmail, getUserById } from "@/backend/data/user";
+import { currentUser } from "@/backend/lib/auth";
 
 interface Vehicle {
     plate: string;
@@ -16,8 +20,22 @@ interface PersonalInformationFormProps {
     }
 
 export const submit = async (formData: PersonalInformationFormProps) => {
+
+  const user = await currentUser();
+
+  if (!user) {
+    return { error: "Unauthorized" };
+  }
+
+  const dbUser = await getUserById(user.id);
+
+  if (!dbUser) {
+    return { error: "Unauthorized" };
+  }
+
     await db.personalInfo.create({
       data: { // Use 'data' instead of 'formData'
+        userId: dbUser.id,
         firstName: formData.first,
         middleName: formData.middle,
         lastName: formData.last,
@@ -25,7 +43,7 @@ export const submit = async (formData: PersonalInformationFormProps) => {
         birthDay: new Date(formData.birth), // Assuming formData.birth is in a compatible format
         vehicles: {
             create: formData.vehicles.map(vehicle => ({
-              plate: vehicle.plate,
+              plateNum: vehicle.plate,
               // Add other vehicle fields here as needed
             })),
         },
@@ -33,5 +51,5 @@ export const submit = async (formData: PersonalInformationFormProps) => {
       },
     });
   
-    return { success: "Account successfully registered!" };
+    return { success: "Account Setup Complete" };
   };
