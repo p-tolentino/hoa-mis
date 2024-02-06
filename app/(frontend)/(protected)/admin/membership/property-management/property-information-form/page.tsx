@@ -12,6 +12,7 @@ import {
 function PropertyForm() {
   return (
     <Grid
+      p="25px"
       maxW="100rem"
       templateRows="repeat(4, 1fr)"
       templateColumns={"repeat(3, 1fr)"}
