@@ -12,7 +12,7 @@ import {
   Button
 } from '@chakra-ui/react'
 import PersonalInformationForm from '@/app/components/membershipForm-components/PersonalInformationForm'
-import VehicleInformationForm from '@/app/components/membershipForm-components/VehicleInformationForm'
+import PropertyInformationForm from '@/app/components/membershipForm-components/PropertyInformationForm'
 
 function MembershipForm () {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0)
@@ -42,7 +42,7 @@ function MembershipForm () {
               fontWeight='700'
               color='brand.500'
             >
-              Vehicle Information
+              Property Information
             </Tab>
           </TabList>
           <TabPanels>
@@ -50,7 +50,7 @@ function MembershipForm () {
               <PersonalInformationForm />
             </TabPanel>
             <TabPanel>
-              <VehicleInformationForm />
+              <PropertyInformationForm />
               <Box
                 display='flex'
                 alignItems='center'
