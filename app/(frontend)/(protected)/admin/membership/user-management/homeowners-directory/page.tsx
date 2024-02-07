@@ -1,17 +1,16 @@
-"use client";
-import {useState, useEffect} from 'react'
-import { Flex, Box, Text, HStack, Select, Spacer } from "@chakra-ui/react";
-import UserManagementTable from "@/components/page-userManagement/UserManagementTable";
+'use client'
+import { Flex, Box, Text, HStack, Select, Spacer } from '@chakra-ui/react'
+import HomeownersDirectoryTable from '@/components/pages-userManagement/HomeownersDirectoryTable'
 
-function UserManagement() {
+export default function HomeownersDirectory () {
   return (
-    <Box w="100rem" h="100rem">
-      <Flex id="user-management">
-        <HStack w="30%">
+    <Box h='100rem'>
+      <Flex id='user-management'>
+        <HStack w='30%'>
           <Select
-            size="sm"
-            fontFamily="font.body"
-            placeholder="Filter Member Type"
+            size='sm'
+            fontFamily='font.body'
+            placeholder='Filter Member Type'
             // value={selectedMemberType}
             // onChange={handleMemberTypeFilterChange}
           >
@@ -25,9 +24,9 @@ function UserManagement() {
           </Select>
           <Spacer />
           <Select
-            size="sm"
-            fontFamily="font.body"
-            placeholder="Sort Member Name"
+            size='sm'
+            fontFamily='font.body'
+            placeholder='Sort Member Name'
             // value={selectedMemberName}
             // onChange={handleMemberTypeFilterChange}
           >
@@ -41,8 +40,7 @@ function UserManagement() {
           </Select>
         </HStack>
       </Flex>
-      <UserManagementTable/>
+      <HomeownersDirectoryTable />
     </Box>
-  );
+  )
 }
-export default UserManagement;

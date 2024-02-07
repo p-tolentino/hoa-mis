@@ -41,7 +41,7 @@ function PersonalInformationForm ({data, handleInputChange, handleVehicleChange,
       h='40vh'
     >
       {/* Full Name */}
-      <GridItem colSpan={3}>
+      <GridItem colSpan={3} my='1rem'>
         <FormControl isRequired>
           <FormLabel fontSize='md' fontFamily='font.body'>
             Full Name:
@@ -90,7 +90,6 @@ function PersonalInformationForm ({data, handleInputChange, handleVehicleChange,
               Date of Birth
             </FormLabel>
             <Input
-              isRequired
               type='date'
               placeholder='XXXXX'
               fontFamily='font.body'

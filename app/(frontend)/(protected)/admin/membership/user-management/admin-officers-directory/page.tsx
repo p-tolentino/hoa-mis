@@ -8,11 +8,11 @@ import {
   Input,
   Stack
 } from '@chakra-ui/react'
-import AssociationContactDirectoryTable from '@/app/components/associationContactDirectory-components/AssociationContactDirectoryTable'
+import AdminOfficersDirectoryTable from '@/components/pages-userManagement/AdminOfficersDirectoryTable'
 
-function AssociationContactDirectory () {
+export default function AdminOfficersDirectory () {
   return (
-    <Box w='100rem' h='100rem'>
+    <Box h='100rem'>
       <Flex id='association-contact-directory'>
         <Stack direction='row' w='100%'>
           <HStack w='30%'>
@@ -56,8 +56,7 @@ function AssociationContactDirectory () {
           </Stack>
         </Stack>
       </Flex>
-      <AssociationContactDirectoryTable />
+      <AdminOfficersDirectoryTable />
     </Box>
   )
 }
-export default AssociationContactDirectory

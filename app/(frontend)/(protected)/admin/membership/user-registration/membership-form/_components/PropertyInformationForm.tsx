@@ -28,7 +28,7 @@ function PropertyInformationForm ({handleInputChange2}: PropertyInformationFormP
       h='40vh'
     >
       {/* What type of homeowner are you? */}
-      <GridItem colSpan={3} mt='1rem'>
+      <GridItem colSpan={3} my='1rem'>
         <FormControl>
           <FormLabel fontSize='md' fontFamily={'font.body'} w='30%'>
             What type of homeowner are you?
@@ -52,13 +52,14 @@ function PropertyInformationForm ({handleInputChange2}: PropertyInformationFormP
           </RadioGroup>
         </FormControl>
       </GridItem>
+
       {/* Complete Home Address */}
       <GridItem colSpan={3}>
         <FormControl isRequired>
           <FormLabel fontSize='md' fontFamily='font.body'>
             Complete Home Address:
           </FormLabel>
-          <Select variant='filled' mb={'2rem'}>
+          <Select variant='filled'>
             <option value={'address1'}>Address 1</option>
             <option value={'address2'}>Address 2</option>
             <option value={'address3'}>Address 3</option>

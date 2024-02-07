@@ -15,11 +15,18 @@ import {
 } from '@chakra-ui/react'
 import EditProfileForm from './EditProfileForm'
 
-export default function EditProfileButton () {
+export default function EditProfileButton ({
+  biography,
+  contactNumber
+}: {
+  biography: string
+  contactNumber: string
+}) {
   // Form Title and instructions
   const formTitle = 'Edit Profile'
   const formInstructions =
     'Please fill out the following fields to edit your profile.'
+  const action = 'View My Profile'
 
   // Modal functions
   const { isOpen, onClose, onOpen } = useDisclosure()
@@ -35,7 +42,7 @@ export default function EditProfileButton () {
       </Button>
 
       {/* Modal when button is clicked */}
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} motionPreset='scale' size={'xl'}>
         <ModalOverlay />
         <ModalContent pt={'10px'} pb={'1.5rem'}>
           <ModalHeader>
@@ -48,7 +55,10 @@ export default function EditProfileButton () {
             </Text>
           </ModalHeader>
           <ModalBody>
-            <EditProfileForm />
+            <EditProfileForm
+              biography={biography}
+              contactNumber={contactNumber}
+            />
           </ModalBody>
         </ModalContent>
       </Modal>

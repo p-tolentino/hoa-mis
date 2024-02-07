@@ -12,19 +12,8 @@ import {
   Progress,
   Button
 } from '@chakra-ui/react'
-
-import { AddIcon } from '@chakra-ui/icons'
-import {
-  Input,
-  FormControl,
-  FormLabel,
-  Grid,
-  GridItem,
-  IconButton
-} from '@chakra-ui/react'
-
-import PersonalInformationForm from '@/app/components/membershipForm-components/PersonalInformationForm'
-import PropertyInformationForm from '@/app/components/membershipForm-components/PropertyInformationForm'
+import PersonalInformationForm from './_components/PersonalInformationForm'
+import PropertyInformationForm from './_components/PropertyInformationForm'
 import { submit } from '@/backend/actions/submitForm'
 
 function MembershipForm () {
@@ -142,7 +131,7 @@ function MembershipForm () {
                 display='flex'
                 alignItems='center'
                 justifyContent='center'
-                mt='30px'
+                mt='5rem'
               >
                 <Button
                   type='submit'
