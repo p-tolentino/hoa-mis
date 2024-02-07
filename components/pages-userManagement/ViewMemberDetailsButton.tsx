@@ -22,19 +22,40 @@ import {
   ListItem
 } from '@chakra-ui/react'
 
-const ViewMemberDetailsButton = () => {
+import { getUserById, getUserProfileById } from '@/backend/actions/getUsers'
+
+
+interface ViewMemberDetailsProps{
+  CombinedUser: {
+    id: string;
+    name: string | null;
+    email: string | null;
+    image: string | null;
+    emailVerified: Date | null;
+    status: string;
+    password: string | null;
+    role: string;
+    firstName: string | null;
+    middleName: string | null;
+    lastName: string | null;
+    phoneNumber: string | null;
+    birthDay: Date | null;
+    type: string | null;
+    bio: string|null,
+    position: string|null
+  }
+}
+
+const ViewMemberDetailsButton = ({CombinedUser: info}: ViewMemberDetailsProps) => {
+  console.log("this is view member details button", info);
   const action = 'Member Information'
   const { isOpen, onOpen, onClose } = useDisclosure()
   const data = [
     {
       houseNoStreet: 'House No. & Street:',
-      numName: '00 Apple Street',
-      contactNumber: 'Contact Number',
-      number: '0900 000 0000',
-      cNlink: 'tel:+63-900-000-0000',
-      emailAddress: 'Email Address',
-      email: 'john.doe@gmail.com',
-      eAlink: 'mailto:john.doe@gmail.com'
+      contactNumber: 'Contact Number:',
+      emailAddress: 'Email Address:',
+      // eAlink: 'mailto:john.doe@gmail.com'
     }
   ]
 
@@ -70,15 +91,15 @@ const ViewMemberDetailsButton = () => {
                   <Avatar size='2xl' src='avatar-1.jpg' />
                   <Box ml='10px'>
                     <Heading size='lg' fontFamily='font.heading'>
-                      John Doe
+                    {[info.firstName, info.middleName, info.lastName].filter(Boolean).join(' ')}
                     </Heading>
                     <Box fontFamily='font.body'>
-                      <Text fontSize='24px'>Admin | President</Text>
+                      <Text fontSize='24px'>{info.position}</Text>
                       <Text fontSize='sm' lineHeight='0.5' mt='1rem'>
                         Status:
                       </Text>
-                      <Text fontSize='24px' color='green'>
-                        Active
+                      <Text fontSize='24px' color='black'>
+                        {info.status}
                       </Text>
                     </Box>
                   </Box>
@@ -91,7 +112,7 @@ const ViewMemberDetailsButton = () => {
                     Biography
                   </Heading>
                   <Text fontFamily='font.body' textAlign='justify'>
-                    {biography}
+                    {info.bio}
                   </Text>
                 </Box>
 
@@ -113,7 +134,7 @@ const ViewMemberDetailsButton = () => {
                               {val.houseNoStreet}
                             </Td>
                             <Td px={0} py={1} fontFamily='font.body'>
-                              {val.numName}
+                              -
                             </Td>
                           </Tr>
                         ))}
@@ -128,9 +149,9 @@ const ViewMemberDetailsButton = () => {
                               {val.contactNumber}
                             </Td>
                             <Td px={0} py={1} fontFamily='font.body'>
-                              <a href={val.cNlink} target='_blank'>
-                                {val.number}
-                              </a>
+                              {/* <a href={val.cNlink} target='_blank'> */}
+                                {info.phoneNumber}
+                              {/* </a> */}
                             </Td>
                           </Tr>
                         ))}
@@ -145,9 +166,9 @@ const ViewMemberDetailsButton = () => {
                               {val.emailAddress}
                             </Td>
                             <Td px={0} py={1} fontFamily='font.body'>
-                              <a href={val.eAlink} target='_blank'>
-                                {val.email}
-                              </a>
+                              {/* <a href={val.eAlink} target='_blank'> */}
+                                {info.email}
+                              {/* </a> */}
                             </Td>
                           </Tr>
                         ))}

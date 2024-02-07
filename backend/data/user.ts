@@ -24,6 +24,18 @@ export const getUserById = async (id: string) => {
   }
 };
 
+export const getUserProfileById = async (id: string) => {
+  try {
+    const user = await db.personalInfo.findUnique({
+      where: { id },
+    });
+
+    return user;
+  } catch {
+    return null;
+  }
+};
+
 export const getAllUser = async () => {
   try {
     const users = await db.user.findMany();

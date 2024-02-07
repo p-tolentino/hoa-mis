@@ -48,8 +48,7 @@ model PersonalInfo {
   birthDay    DateTime?
   vehicles    Vehicle[]
   type        String?
-  position   String?
-  interests String?
+  position   String? @default("Member")
   bio String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)

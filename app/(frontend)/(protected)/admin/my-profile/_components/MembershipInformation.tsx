@@ -12,13 +12,14 @@ import {
   Tr
 } from '@chakra-ui/react'
 
-export default function MembershipInformation ({
-  biography,
-  contactNumber
-}: {
-  biography: string
-  contactNumber: string
-}) {
+interface membershipInformationProps{
+  biography: string | null,
+  contactNumber: string | null,
+  emailAddress: string| null,
+}
+
+export default function MembershipInformation ({biography, contactNumber,emailAddress}: membershipInformationProps) 
+ {
   return (
     <SimpleGrid
       columns={2}
@@ -46,7 +47,7 @@ export default function MembershipInformation ({
                   House No. & Street
                 </Td>
                 <Td px={0} py={2}>
-                  00 Apple Street
+                  -
                 </Td>
               </Tr>
               <Tr>
@@ -62,7 +63,7 @@ export default function MembershipInformation ({
                   Email Address
                 </Td>
                 <Td px={0} py={2}>
-                  john.doe@gmail.com
+                  {emailAddress}
                 </Td>
               </Tr>
             </Tbody>

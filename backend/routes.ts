@@ -35,6 +35,6 @@ export const apiAuthPrefix = "/api/auth";
  * Default redirect path after logging in
  * @type {string}
  */
-export const DEFAULT_LOGIN_REDIRECT = "/user/setup"; // TODO: Change to user dashboard
+export const DEFAULT_LOGIN_REDIRECT = "/admin/membership/user-registration/membership-form"; // TODO: Change to user dashboard
 
-export const DEFAULT_FIRST_LOGIN_REDIRECT = "/admin/membership/membership-form";
+export const DEFAULT_FIRST_LOGIN_REDIRECT = "/admin/membership/user-registration/membership-form";
