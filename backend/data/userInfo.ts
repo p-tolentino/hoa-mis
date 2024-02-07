@@ -2,11 +2,14 @@ import { db } from "@/backend/lib/db";
 
 export const getInfoById = async (id: string) => {
   try {
-    const user = await db.personalInfo.findUnique({
+    const info = await db.personalInfo.findUnique({
       where: { userId: id },
+      include: {
+        vehicles: true,
+      },
     });
 
-    return user;
+    return info;
   } catch {
     return null;
   }
