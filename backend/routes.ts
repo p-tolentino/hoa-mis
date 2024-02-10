@@ -12,16 +12,16 @@ export const publicRoutes = ['/', '/new-verification']
  */
 export const authRoutes = [
   '/login',
-  '/register'
-  // '/admin/my-profile',
+  '/register',
+  '/admin/my-profile',
 
   // Membership Module
-  // '/admin/membership',
-  // '/admin/membership/user-management/homeowners-directory',
-  // '/admin/membership/user-management/admin-officers-directory',
-  // '/admin/membership/property-management/browse-house-lots',
-  // '/admin/membership/property-management/property-information-form',
-  // '/admin/membership/user-registration/membership-form'
+  '/admin/membership',
+  '/admin/membership/user-management/homeowners-directory',
+  '/admin/membership/user-management/admin-officers-directory',
+  '/admin/membership/property-management/browse-properties',
+  '/admin/membership/property-management/property-information-form',
+  '/admin/membership/user-registration/membership-form'
 ]
 
 /**

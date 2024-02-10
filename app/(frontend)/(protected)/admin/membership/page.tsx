@@ -14,8 +14,8 @@ export default function MembershipModuleMenu () {
         '/admin/membership/user-management/admin-officers-directory'
       ],
       category_descriptions: [
-        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
-        '2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+        "View the list of all Homeowners' Association-registered homeowners.",
+        "View the list of all admins and officers within the Homeowners' Association."
       ]
     }
   ]
@@ -24,16 +24,16 @@ export default function MembershipModuleMenu () {
     {
       category: 'Property Management',
       category_buttons: [
-        'Browse House Lots (Maps)',
+        'Browse Properties (Maps)',
         'Property Information Form'
       ],
       category_hrefs: [
-        '/admin/membership/property-management/browse-house-lots',
+        '/admin/membership/property-management/browse-properties',
         '/admin/membership/property-management/property-information-form'
       ],
       category_descriptions: [
-        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
-        '2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+        "View property information and browse through properties owned by the Homeowners' Association.",
+        "All homeowners are required to complete the property information form before gaining access to the system's functionalities."
       ]
     }
   ]
@@ -44,7 +44,7 @@ export default function MembershipModuleMenu () {
       category_buttons: ['Membership Form'],
       category_hrefs: ['/admin/membership/user-registration/membership-form'],
       category_descriptions: [
-        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+        "All homeowners are required to complete the membership form before gaining access to the system's functionalities."
       ]
     }
   ]

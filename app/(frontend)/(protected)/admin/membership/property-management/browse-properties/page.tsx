@@ -14,7 +14,7 @@ import {
   ListItem
 } from '@chakra-ui/react'
 
-export default function PropertyManagement () {
+export default function BrowseProperties () {
   return (
     <>
       <SimpleGrid
