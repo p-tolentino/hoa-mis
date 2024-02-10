@@ -4,50 +4,61 @@ import { Flex } from '@chakra-ui/react'
 import ModuleMenuCard from '@/components/system/ModuleMenuCard'
 
 export default function FinanceManagementMenu () {
-  const homeownerMenuCard = [
+  const homeownerReportsMenuCard = [
     {
-      category: 'Homeowners',
-      category_buttons: ['HOA Dues Payment Record'],
-      category_hrefs: ['/admin/finance-management/dues-payment-record'],
+      category: 'Homeowner Reports (Admin/Officers/BOD View)',
+      category_buttons: ['Homeowner Payment Record'],
+      category_hrefs: ['/admin/finance-management/homeowner-payment-record'],
       category_descriptions: [
-        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+        'View the payment record of each homeowner to determine whether they currently have any outstanding balances.'
       ]
     }
   ]
 
-  const hoaOfficerAdminMenuCard = [
+  const fundManagementMenuCard = [
     {
-      category: 'Admins & Officers',
-      category_buttons: [
-        'HOA Income Statements',
-        'HOA Cash Flow Statement',
-        'HOA Balance Sheets',
-        'HOA Budget Reports'
-      ],
+      category: 'Fund Management (Admin/Treasurer)',
+      category_buttons: ['Income & Expense Management', 'Budget Planning'],
       category_hrefs: [
-        '/admin/finance-management/income-statements',
-        '/admin/finance-management/cash-flow-statement',
-        '/admin/finance-management/balance-sheets',
-        '/admin/finance-management/budget-reports'
+        '/admin/finance-management/income-expense-management',
+        '/admin/finance-management/budget-planning'
       ],
       category_descriptions: [
-        '1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
-        '2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
-        '3Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?',
-        '4Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quo veritatis repudiandae amet deserunt pariatur?'
+        "Enter the organization's revenues and expenditures, and access its reports.",
+        'Enter estimated values for organizational funds and expenses to generate a visual representation of the organizational budget for a specified duration.'
+      ]
+    }
+  ]
+
+  const yourFinancesMenuCard = [
+    {
+      category: 'Your Finances (Homeowner View)',
+      category_buttons: ['Statement of Account', 'Payment History'],
+      category_hrefs: [
+        '/admin/finance-management/statement-of-account',
+        '/admin/finance-management/payment-history'
+      ],
+      category_descriptions: [
+        "View your outstanding balance to the Homeowners' Association.",
+        "View all payments made to the Homeowners' Association."
       ]
     }
   ]
 
   return (
     <Flex gap='2.5rem'>
-      {/* Homeowner Finance Buttons */}
-      {homeownerMenuCard.map((categoryData, index) => (
+      {/* Homeowner Reports Buttons */}
+      {homeownerReportsMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}
 
-      {/* HOA Admin and Officer Buttons */}
-      {hoaOfficerAdminMenuCard.map((categoryData, index) => (
+      {/* Fund Management Buttons */}
+      {fundManagementMenuCard.map((categoryData, index) => (
+        <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
+      ))}
+
+      {/* Your Finances Buttons */}
+      {yourFinancesMenuCard.map((categoryData, index) => (
         <ModuleMenuCard key={index} data={categoryData}></ModuleMenuCard>
       ))}
     </Flex>

@@ -24,11 +24,11 @@ const ModuleMenuCard = ({
 }) => {
   return (
     <>
-      <Box mb='3rem'>
+      <Box w='25vw' mb='3rem'>
         <Heading size='md' mb='1rem' fontFamily='font.heading'>
           {category}
         </Heading>
-        <Card maxW='30vw' h='max-content' pb='1.5rem' shadow='md'>
+        <Card h='max-content' shadow='md'>
           <CardBody>
             <ButtonGroup
               flexDir={'column'}
